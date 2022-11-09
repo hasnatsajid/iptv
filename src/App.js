@@ -12,7 +12,7 @@ import Terms from './components/UI/Terms';
 
 // i18next
 import { useTranslation } from 'react-i18next';
-import React, { Component, Suspense } from 'react';
+import React, { Component, Suspense, useRef } from 'react';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
@@ -27,6 +27,7 @@ const Loader = () => (
 
 function App() {
   const { t, i18n } = useTranslation();
+  const tawkMessengerRef = useRef();
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -35,7 +36,7 @@ function App() {
   return (
     <Suspense fallback={<Loader />}>
       <div className="app">
-        <TawkMessengerReact propertyId="property_id" widgetId="default" />
+        <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
         <Layout>
           {/* <button type="button" onClick={() => changeLanguage('de')}>
             de

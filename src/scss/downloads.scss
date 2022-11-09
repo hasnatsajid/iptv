@@ -43,6 +43,10 @@
         span {
           margin: auto;
         }
+
+        // @media (max-width: 1032px) {
+        //   display: block;
+        // }
       }
 
       .copybtn {
@@ -55,10 +59,23 @@
         float: right;
         border-radius: 0px;
         cursor: pointer;
+
+        @media (max-width: 720px) {
+          margin-right: 0;
+        }
       }
 
       @media (max-width: 1032px) {
         max-width: 80%;
+      }
+
+      @media (max-width: 720px) {
+        font-size: 13px;
+      }
+
+      @media (max-width: 400px) {
+        font-size: 12px;
+        line-height: 1em;
       }
     }
 
