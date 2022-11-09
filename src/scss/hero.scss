@@ -1,0 +1,42 @@
+.hero {
+  .slick-slider {
+    text-align: center;
+    & > button {
+      &::before {
+        color: white;
+      }
+      z-index: 2;
+    }
+
+    .slider-item {
+      height: 284.583px;
+      //   background-size: cover;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .item1 {
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url('../../public/images/banner-1.jpg');
+    }
+
+    .item2 {
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url('../../public/images/banner-2.jpg');
+    }
+
+    .slick-next {
+      right: 0;
+    }
+
+    .slick-prev {
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.terms {
+  padding: 4% 0;
+
+  h2 {
+    text-align: center;
+  }
+
+  .content {
+    display: flex;
+
+    h3 {
+      color: #da4748;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    & > div {
+      width: 50%;
+
+      @media (max-width: 980px) {
+        width: 100%;
+      }
+    }
+
+    .license {
+      width: 45%;
+      margin-right: 5%;
+
+      @media (max-width: 980px) {
+        width: 100%;
+      }
+    }
+
+    .disclaimer {
+      width: 45%;
+
+      @media (max-width: 980px) {
+        width: 100%;
+      }
+
+      .item {
+        display: flex;
+        margin-bottom: 15px;
+        font-size: 17px;
+
+        .image {
+          width: 32px;
+
+          img {
+            // width: 70%;
+            // max-width: 70%;
+          }
+        }
+
+        .text {
+          padding-left: 15px;
+          line-height: 1.7em;
+        }
+      }
+    }
+
+    @media (max-width: 980px) {
+      display: block;
+    }
+  }
+}
