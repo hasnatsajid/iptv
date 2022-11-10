@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next';
 
-const Features = () => {
+const Features = ({ lang }) => {
   const { t, i18n } = useTranslation();
 
   return (
-    <div id="features">
+    <div id="features" className="features">
       <h2>{t('features.title')}</h2>
 
       <div className="container wrapper">
@@ -14,85 +14,113 @@ const Features = () => {
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.1')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.1')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.2')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.2')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.3')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.3')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.4')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.4')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.5')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.5')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.6')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.6')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.7')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.7')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.8')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.8')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.9')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.9')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.10')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.10')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.11')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.11')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.12')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.12')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.13')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.13')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.14')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.14')}
+              </div>
             </div>
           </div>
 
@@ -101,73 +129,97 @@ const Features = () => {
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.15')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.15')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.16')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.16')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.17')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.17')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.18')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.18')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.19')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.19')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.20')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.20')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.21')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.21')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.22')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.22')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.23')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.23')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.24')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.24')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.25')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.25')}
+              </div>
             </div>
             <div className="item">
               <div className="icon">
                 <img src="/images/check-3.png" alt="" />
               </div>
-              <div className="text">{t('features.26')}</div>
+              <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+                {t('features.26')}
+              </div>
             </div>
           </div>
         </div>

@@ -27,7 +27,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <div className="howitworks">
+    <div className="howitworks" id="howitworks">
       <h2>{t('working.title')}</h2>
 
       <div className="container wrapper">

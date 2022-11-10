@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Marquee from 'react-fast-marquee';
 import { useTranslation } from 'react-i18next';
 
-const Header = () => {
+const Header = ({ lang, setLang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  // const [lang, setLang] = useState('en');
 
   const menuToggler = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,7 +15,22 @@ const Header = () => {
   const toggleLang = (e) => {
     const lng = e.target.value;
     i18n.changeLanguage(lng);
+    setLang(lng);
   };
+
+  const toggleMenuItem = (e) => {
+    e.preventDefault();
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleItem = (e) => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  useEffect(() => {
+    const lng = localStorage.getItem('i18nextLng');
+    setLang(lng);
+  }, []);
 
   return (
     <header>
@@ -43,16 +59,16 @@ const Header = () => {
               <a href="/">{t('Home')}</a>
             </div>
             <div className="nav-item">
-              <a href="#download">{t('Download')}</a>
+              <a href="#downloads">{t('Download')}</a>
             </div>
             <div className="nav-item">
               <a href="#features">{t('Features')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('HowItWorks')}</a>
+              <a href="#howitworks">{t('HowItWorks')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('Screenshots')}</a>
+              <a href="#screenshots">{t('Screenshots')}</a>
             </div>
             <div className="nav-item">
               <a href="#features">{t('Blog')}</a>
@@ -61,11 +77,11 @@ const Header = () => {
               <a href="#features">{t('ContactUs')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('MyAccount')}</a>
+              <a href="https://users.iptvsmarters.com/index.php/login">{t('MyAccount')}</a>
             </div>
             <div className="nav-item">
               <div className="langs">
-                <select name="" id="" onChange={toggleLang}>
+                <select name="" id="" value={lang} onChange={toggleLang}>
                   <option value="en">en</option>
                   <option value="es">es</option>
                   <option value="he">he</option>
@@ -101,21 +117,31 @@ const Header = () => {
               </div>
             </div>
           )}
-          <div className={`nav-items ${!isMenuOpen && 'hide'}`}>
+          <div className={`nav-items ${!isMenuOpen && 'hide'}`} style={{ textAlign: lang === 'he' ? 'right' : 'left' }}>
             <div className="nav-item">
-              <a href="/">{t('Home')}</a>
+              <a href="/" onClick={toggleMenuItem}>
+                {t('Home')}
+              </a>
             </div>
             <div className="nav-item">
-              <a href="#download">{t('Download')}</a>
+              <a href="#downloads" onClick={toggleItem}>
+                {t('Download')}
+              </a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('Features')}</a>
+              <a href="#features" onClick={toggleItem}>
+                {t('Features')}
+              </a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('HowItWorks')}</a>
+              <a href="#howitworks" onClick={toggleItem}>
+                {t('HowItWorks')}
+              </a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('Screenshots')}</a>
+              <a href="#screenshots" onClick={toggleItem}>
+                {t('Screenshots')}
+              </a>
             </div>
             <div className="nav-item">
               <a href="#features">{t('Blog')}</a>
@@ -124,7 +150,17 @@ const Header = () => {
               <a href="#features">{t('ContactUs')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('MyAccount')}</a>
+              <a href="https://users.iptvsmarters.com/index.php/login">{t('MyAccount')}</a>
+            </div>
+            <div className="nav-item">
+              <div className="langs">
+                <select name="" id="" value={lang} onChange={toggleLang}>
+                  <option value="en">en</option>
+                  <option value="es">es</option>
+                  <option value="he">he</option>
+                  <option value="de">de</option>
+                </select>
+              </div>
             </div>
           </div>
           <div className={`social-icons ${!isMenuOpen && 'hide'}`}>

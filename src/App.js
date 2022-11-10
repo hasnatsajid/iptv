@@ -16,6 +16,7 @@ import React, { Component, Suspense, useRef } from 'react';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
+import { useState } from 'react';
 
 // loading component for suspense fallback
 const Loader = () => (
@@ -27,17 +28,18 @@ const Loader = () => (
 
 function App() {
   const { t, i18n } = useTranslation();
+  const [lang, setLang] = useState('en');
   const tawkMessengerRef = useRef();
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-  };
+  // const changeLanguage = (lng) => {
+  //   i18n.changeLanguage(lng);
+  // };
 
   return (
     <Suspense fallback={<Loader />}>
-      <div className="app">
+      <div className="app" dir={lang === 'he' && 'rtl'}>
         <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
-        <Layout>
+        <Layout lang={lang} setLang={setLang}>
           {/* <button type="button" onClick={() => changeLanguage('de')}>
             de
           </button>
@@ -54,16 +56,16 @@ function App() {
           <HeroSlider />
 
           <div className="wrapper">
-            <Introduction />
+            <Introduction lang={lang} />
           </div>
-          <Features />
+          <Features lang={lang} />
           <Downloads />
           <Rebranding />
-          <Pro />
-          <Premium />
+          <Pro lang={lang} />
+          <Premium lang={lang} />
           <HowItWorks />
           <Screenshots />
-          <Terms />
+          <Terms lang={lang} />
         </Layout>
       </div>
     </Suspense>

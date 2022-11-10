@@ -8,7 +8,7 @@ const Downloads = () => {
   };
 
   return (
-    <div className="downloads">
+    <div className="downloads" id="downloads">
       <h2>{t('downloads.title')}</h2>
 
       <div className="container">

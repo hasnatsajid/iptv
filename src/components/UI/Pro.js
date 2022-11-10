@@ -1,7 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { useState } from 'react';
 
-const Pro = () => {
+const ltr = { marginRight: '15px' };
+
+const rtl = { marginLeft: '15px' };
+
+const Pro = ({ lang }) => {
   const { t, i18n } = useTranslation();
 
   const [tabs, setTabs] = useState(true);
@@ -34,7 +38,7 @@ const Pro = () => {
                 </p>
 
                 <div className="versionbox">
-                  <div className="icon">
+                  <div className="icon" style={lang === 'he' ? { marginLeft: '15px' } : { marginRight: '15px' }}>
                     <img src="/images/Verson.png" alt="" />
                   </div>
                   <div className="text">
@@ -43,7 +47,7 @@ const Pro = () => {
                   </div>
                 </div>
                 <div className="versionbox">
-                  <div className="icon">
+                  <div className="icon" style={lang === 'he' ? { marginLeft: '15px' } : { marginRight: '15px' }}>
                     <img src="/images/Compatibility-1.png" alt="" />
                   </div>
 

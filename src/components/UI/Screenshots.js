@@ -22,7 +22,7 @@ const Screenshots = () => {
   };
 
   return (
-    <div className="screenshots">
+    <div className="screenshots" id="screenshots">
       <h2>{t('Screenshots')}</h2>
 
       {/* <button onClick={() => setToggler(!toggler)}>Toggle Lightbox</button> */}

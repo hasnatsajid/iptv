@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 
-const Terms = () => {
+const Terms = ({ lang }) => {
   const { t, i18n } = useTranslation();
 
   return (
@@ -29,28 +29,36 @@ const Terms = () => {
               <img src="/images/check-3.png" alt="check icon" />
             </div>
 
-            <div className="text">{t('terms.disclaimer.items.1')}</div>
+            <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+              {t('terms.disclaimer.items.1')}
+            </div>
           </div>
           <div className="item">
             <div className="image">
               <img src="/images/check-3.png" alt="check icon" />
             </div>
 
-            <div className="text">{t('terms.disclaimer.items.2')}</div>
+            <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+              {t('terms.disclaimer.items.2')}
+            </div>
           </div>
           <div className="item">
             <div className="image">
               <img src="/images/check-3.png" alt="check icon" />
             </div>
 
-            <div className="text">{t('terms.disclaimer.items.3')}</div>
+            <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+              {t('terms.disclaimer.items.3')}
+            </div>
           </div>
           <div className="item">
             <div className="image">
               <img src="/images/check-3.png" alt="check icon" />
             </div>
 
-            <div className="text">{t('terms.disclaimer.items.4')}</div>
+            <div className="text" style={lang === 'he' ? { paddingRight: '15px' } : { paddingLeft: '15px' }}>
+              {t('terms.disclaimer.items.4')}
+            </div>
           </div>
         </div>
       </div>
