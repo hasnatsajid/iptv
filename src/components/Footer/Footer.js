@@ -38,16 +38,16 @@ const Footer = () => {
               <strong>Email : support@iptvsmarters.com</strong>
             </p>
             <div className="icons">
-              <a href="/" className="icon">
+              <a href="https://play.google.com/store/apps/details?id=com.nst.smartersplayer" className="icon">
                 <img src="/images/play.png" alt="Playstore app" />
               </a>
-              <a href="/" className="icon">
+              <a href="https://www.iptvsmarters.com/download?download=mac" className="icon">
                 <img src="/images/ios.png" alt="IOS app" />
               </a>
-              <a href="/" className="icon">
+              <a href="https://www.iptvsmarters.com/download?download=windows" className="icon">
                 <img src="/images/window.png" alt="Windows app" />
               </a>
-              <a href="/" className="icon">
+              <a href="https://apps.apple.com/in/app/smarters-player-lite/id1628995509" className="icon">
                 <img src="/images/apple.png" alt="Apple store app" />
               </a>
             </div>

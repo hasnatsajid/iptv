@@ -29,32 +29,32 @@ const Downloads = () => {
 
           <div className="links">
             <div className="link">
-              <a href="/">
+              <a href="https://www.iptvsmarters.com/download?download=android">
                 <img src="/images/apk-300x68.png" alt="" />
               </a>
             </div>
             <div className="link">
-              <a href="/">
+              <a href="https://play.google.com/store/apps/details?id=com.nst.smartersplayer">
                 <img src="/images/googlestore-300x68.png" alt="" />
               </a>
             </div>
             <div className="link">
-              <a href="/">
+              <a href="https://apps.apple.com/in/app/smarters-player-lite/id1628995509">
                 <img src="/images/IOS-300x68.png" alt="" />
               </a>
             </div>
             <div className="link">
-              <a href="/">
+              <a href="https://www.iptvsmarters.com/download?download=mac">
                 <img src="/images/MAC-300x68.png" alt="" />
               </a>
             </div>
             <div className="link">
-              <a href="/">
+              <a href="https://www.iptvsmarters.com/download?download=windows_app">
                 <img src="/images/window-300x68.png" alt="" />
               </a>
             </div>
             <div className="link">
-              <a href="/">
+              <a href="http://webtv.iptvsmarters.com/">
                 <img src="/images/web-300x68.png" alt="" />
               </a>
             </div>

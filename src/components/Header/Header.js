@@ -6,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 const Header = ({ lang, setLang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  // const [lang, setLang] = useState('en');
 
   const menuToggler = () => {
     setIsMenuOpen(!isMenuOpen);

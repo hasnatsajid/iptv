@@ -49,7 +49,7 @@ const Premium = ({ lang }) => {
           </div>
 
           <div className="buynow">
-            <a href="/" className="buynowpremium">
+            <a href="http://webtv.iptvsmarters.com/" className="buynowpremium">
               {t('premium.button')}
             </a>
           </div>
