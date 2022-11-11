@@ -1,0 +1,215 @@
+{
+  "Home": "Heim",
+  "Download": "Download",
+  "Features": "Merkmale",
+  "HowItWorks": "Wie es funktioniert",
+  "Screenshots": "Screenshots",
+  "Blog": "Bloggen",
+  "ContactUs": "Kontaktiere uns",
+  "MyAccount": "Mein Smarters Konto",
+  "title": "Was ist ein IPTV Smarters?",
+  "note": "Hinweis",
+  "step": "Schritt",
+  "description": {
+    "part1": "Die IPTV Smarters App ist ein fabelhafter Video-Streaming-Player, der es Ihren IPTV-Kunden oder Endbenutzern ermöglicht, von Ihnen bereitgestellte Inhalte wie Live-TV, VOD, Serien und TV-Catchup zu streamen; auf ihren Android- und iOS-Geräten, Smart TV und sogar auf macOS/Windows PC/Laptop.",
+    "part2": "Nachfolgend finden Sie eine umfassende Liste der von IPTV Smarters Pro unterstützten Geräte.",
+    "android": "Android-Telefone, Android-TV, Android-TV-Boxen, Android-FireTV-Sticks, Nvidia-Shields und andere Android-Sticks oder -Geräte.",
+    "ios": "iPhone, iPad, TvOS (Apple TV).",
+    "smart": "LG & Samsung (App im Store zum Download verfügbar).",
+    "windows": "Windows 8/10 und alle Versionen von macOS, einschließlich der neuesten."
+  },
+  "features": {
+    "title": "Funktionsübersicht",
+    "1": "Live, Filme, Serien und Radio-Streaming werden unterstützt",
+    "2": "Neues Layout / UI-Design",
+    "3": "Meistersuche",
+    "4": "EPG (TV Program Guide) Verbesserungen bei ext. Quellen",
+    "5": "Möglichkeit, die Puffergröße für die Kindersicherung des VIDEO-Players (NEU) zu ändern",
+    "6": "Unterstützung: TV-Catch-Up-Streaming",
+    "7": "Support: Beobachten Sie weiter",
+    "8": "Unterstützung: Kürzlich hinzugefügte Filme und Serien",
+    "9": "Unterstützung: Multi-Screens und Multi-User (Verbesserungen)",
+    "10": "Laden von M3u-Dateien und URLs wird unterstützt",
+    "11": "Unterstützung: Lokales Abspielen von Audio-/Videodateien",
+    "12": "VPN-Integration",
+    "13": "Unterstützung: Spielen Sie einen einzelnen Stream",
+    "14": "Fehlerbehebungen und viele weitere Verbesserungen",
+    "15": "Möglichkeit, externe Player hinzuzufügen",
+    "16": "Geschwindigkeitstestfunktion Integrierter Support: Dynamische Sprachumschaltung",
+    "17": "Unterstützung: Bild-in-Bild",
+    "18": "Chrome Casting-Verbesserungen",
+    "19": "Neue Steuerelemente im Media Player",
+    "20": "Automatisches Abspielen der nächsten Episode unterstützt",
+    "21": "Support: Cache automatisch und manuell löschen",
+    "22": "TabView unterstützt",
+    "23": "Die neue Art, Inhalte herunterzuladen",
+    "24": "Laden Sie Ihre Playlist oder Datei-/URL-Verbesserungen",
+    "25": "Möglichkeit, die Kanalliste im Videoplayer zu öffnen",
+    "26": "Möglichkeit, die „Liste der Episoden“ im Videoplayer zu öffnen"
+  },
+  "downloads": {
+    "title": "Downloads",
+    "url": "Download-URL"
+  },
+  "rebranding": {
+    "title": "Umbenennung",
+    "heading": "Eine vollständig angepasste und markenfähige App für OTT-Dienstleister",
+    "button": "Holen Sie sich Ihren eigenen OTT-Player",
+    "delivery": "Lieferung innerhalb von 2 Tagen. Es gelten die AGB"
+  },
+  "pro": {
+    "title": "IPTV Smarters Pro - Smart TV",
+    "tabs": {
+      "1": "Samsung Smart TV",
+      "2": "LG Smart TV"
+    },
+    "description": "ist ein unglaublicher Video-Streaming-Player, der speziell für Endbenutzer entwickelt wurde, die die Möglichkeit haben möchten, Live-TV, VOD, Serien und TV Catchup auf ihrem Smart TV anzusehen. Diese Videoplayer-App ist einfach zu bedienen und dennoch sehr effizient mit einem leistungsstarken Player, einem attraktiven und sehr beeindruckenden Layout und vor allem benutzerfreundlich.",
+    "version": "Ausführung",
+    "compatibility": {
+      "heading": "Kompatibilität",
+      "text": "Kompatibel mit allen Geräten"
+    }
+  },
+  "premium": {
+    "title": "Holen Sie sich die Premium-Version - KOSTENLOS",
+    "heading": "Schalte alle Premium-Funktionen frei",
+    "items": {
+      "1": "Meistersuche",
+      "2": "Elterliche Kontrolle",
+      "3": "EPG-Quellen verwalten",
+      "4": "Spielerauswahl und Unterstützung externer Spieler",
+      "5": "Unterstützung der Bild-in-Bild-Ansicht"
+    },
+    "button": "HOL DIR DIE PREMIUM-VERSION",
+    "note": {
+      "ios": {
+        "heading": "Für iOS",
+        "text": "Sie müssen die Anwendung aus dem Apple Store herunterladen und Premium über den In-App-Kauf kaufen"
+      },
+      "smart": {
+        "heading": "Für Smart-TV",
+        "text": "Es ist ein kostenloser IPTV-Player für Endbenutzer."
+      }
+    }
+  },
+  "working": {
+    "title": "Wie es funktioniert",
+    "tabs": {
+      "1": "Android",
+      "2": "iOS",
+      "3": "Windows/Mac",
+      "4": "Firestick",
+      "5": "Samsung / LG"
+    },
+    "android": {
+      "step1": {
+        "1": "Laden Sie unsere App herunter",
+        "2": "IPTV Smarters Pro",
+        "3": "hier"
+      },
+      "step2": "Melden Sie sich mit Ihren Abonnementdaten bei der Anwendung an (Einzelheiten erhalten Sie von Ihrem Dienstanbieter).",
+      "step3": "Nach der Anmeldung >> Premium-Version erhalten, um exklusive Funktionen freizuschalten."
+    },
+    "ios": {
+      "step1": {
+        "1": "Laden Sie unsere App herunter",
+        "2": "IPTV Smarters Pro",
+        "3": "hier"
+      },
+      "step2": "Melden Sie sich mit Ihren Abonnementdaten bei der Anwendung an (Einzelheiten erhalten Sie von Ihrem Dienstanbieter).",
+      "step3": "Nach der Anmeldung >> Premium-Version erhalten, um exklusive Funktionen freizuschalten."
+    },
+    "windows": {
+      "step1": {
+        "windows": {
+          "1": "Für Windows",
+          "2": "Und installieren Sie die Anwendung"
+        },
+        "mac": {
+          "1": "Für Mac",
+          "2": "Und installieren Sie die Anwendung"
+        }
+      },
+      "step2": "Melden Sie sich mit Ihren Abonnementdaten bei der Anwendung an (Einzelheiten erhalten Sie von Ihrem Dienstanbieter).",
+      "message": "Die Funktionen der Premium-Version sind für Win/Mac nicht verfügbar"
+    },
+    "firestick": {
+      "step1": {
+        "1": "Laden Sie IPTV Smarters pro direct apk herunter",
+        "2": "hier"
+      },
+      "step2": "Laden Sie die Downloader-App auf Firestick herunter.",
+      "step3": "Gehen Sie zu den Firestick-Einstellungen >> Mein Fire TV >> Entwickleroptionen >> Von unbekannten Apps installieren >> Klicken Sie auf Downloader, um den Status auf EIN zu ändern.",
+      "step4": "Öffnen Sie die Downloader-App und fügen Sie den vollständigen APK-Link zum Downloader hinzu und installieren Sie dann die App."
+    },
+    "samsung": {
+      "samsung": {
+        "heading": "Für Samsung Smart TV",
+        "step1": {
+          "1": "Drücken Sie die",
+          "2": "Smart Hub",
+          "3": "Taste von Ihrer Fernbedienung."
+        },
+        "step2": {
+          "1": "Suche nach dem",
+          "2": "IPTV Smarters Pro",
+          "3": "installieren."
+        },
+        "step3": "Melden Sie sich mit Ihren Abonnementdetails, d. h. Benutzername, Passwort, Portal-URL, bei der Anwendung an.",
+        "note": {
+          "1": "Stellen Sie sicher, dass Ihre Dienstanbieter ihre DNS bei uns registriert haben.",
+          "2": "Mehr Info"
+        }
+      },
+      "lg": {
+        "heading": "Für LG Smart-TV",
+        "step1": {
+          "1": "Drücken Sie die",
+          "2": "Home button",
+          "3": "auf der Fernbedienung und gehen Sie zum LG Content Store."
+        },
+        "step2": {
+          "1": "Suche nach dem",
+          "2": "IPTV Smarters Pro",
+          "3": "installieren."
+        },
+        "step3": "Melden Sie sich mit Ihren Abonnementdetails, d. h. Benutzername, Passwort, Portal-URL, bei der Anwendung an.",
+
+        "message": "Die Funktionen der Premium-Version sind für Samsung/LG nicht verfügbar",
+
+        "note": {
+          "1": "Stellen Sie sicher, dass Ihre Dienstanbieter ihre DNS bei uns registriert haben.",
+          "2": "Mehr Info"
+        }
+      }
+    },
+    "note": {
+      "heading": "Hinweis",
+      "text": "Wir bieten oder verkaufen keine Abonnements, Streams und Inhalte. Wir sind ein Softwareentwicklungsunternehmen."
+    }
+  },
+  "terms": {
+    "title": "Geschäftsbedingungen",
+    "license": {
+      "title": "Lizenzvereinbarung",
+      "items": {
+        "1": "SIE STIMMEN HIERMIT DEN BEDINGUNGEN ZU, ANDERNFALLS VERWENDEN SIE DIE APP NICHT.",
+        "2": "IPTV Smarters ist ein fortschrittlicher Player, der von M3U- und JSON-Benutzern erstellte Wiedergabelisten verwendet.",
+        "3": "Wir stellen keine tatsächlichen Wiedergabelisten oder Inhalte bereit.",
+        "4": "Diese Anwendung ist für die Verwendung mit der eigenen oder erstellten Wiedergabeliste des Benutzers mit legalen Inhalten konzipiert.",
+        "5": "Sie sind dafür verantwortlich, dass Ihre erstellten Playlists/Inhalte legal sind und dass Sie die vollen Rechte zur Nutzung und/oder AUFNAHME von Inhalten haben.",
+        "6": "Wir sind nicht verantwortlich für den Missbrauch von Urheberrechten oder Inhalten Dritter mit unserer Software und überprüfen Sie bitte, ob Ihre Inhalte legal sind und/oder Sie Nutzungs- und/oder AUFZEICHNUNGSRECHTE haben.",
+        "7": "Durch die Nutzung unserer Anwendungsmittel akzeptieren Sie die oben genannten Bedingungen"
+      }
+    },
+    "disclaimer": {
+      "title": "Haftungsausschluss",
+      "items": {
+        "1": "IPTV Smarters stellt den Benutzern keine audiovisuellen Inhalte zur Verfügung oder erbittet diese.",
+        "2": "IPTV Smarters hat keinerlei Verbindung zu Drittanbietern.",
+        "3": "Nutzer müssen ihre eigenen Inhalte bereitstellen",
+        "4": "Wir unterstützen ausdrücklich nicht das Streamen von urheberrechtlich geschütztem Material ohne Erlaubnis des Urheberrechtsinhabers"
+      }
+    }
+  }
+}

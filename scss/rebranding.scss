@@ -1,0 +1,91 @@
+.rebranding {
+  position: relative;
+
+  h2 {
+    text-align: center;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+
+    @media (max-width: 1032px) {
+      display: block;
+    }
+  }
+
+  .container {
+    // position: absolute;
+    color: white;
+    // width: 100%;
+    background: url(/images/ott-section-bg.jpg);
+
+    & > img {
+      width: 100vw;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+
+  .content {
+    width: 53%;
+    margin-right: 4.5%;
+
+    .inner {
+      width: 80%;
+      margin: auto;
+
+      @media (max-width: 1032px) {
+        width: 100%;
+      }
+    }
+
+    h1 {
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 700;
+      font-size: 40px;
+      padding-bottom: 10px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.3em;
+      text-transform: uppercase;
+    }
+
+    & > a {
+      padding-top: 9px !important;
+      padding-bottom: 10px !important;
+    }
+
+    .getnow {
+      color: #5700ef !important;
+      border-width: 0px !important;
+      border-radius: 6px;
+      font-family: 'Quicksand', Helvetica, Arial, Lucida, sans-serif !important;
+      font-weight: 700 !important;
+      background-color: #ffffff;
+      padding: 0.8em 2em;
+    }
+
+    p {
+      margin-top: 1.5rem;
+    }
+
+    @media (max-width: 1032px) {
+      width: 100%;
+    }
+  }
+
+  .image {
+    // position: absolute;
+    width: 47%;
+
+    img {
+      width: 100%;
+    }
+
+    @media (max-width: 1032px) {
+      width: 100%;
+    }
+  }
+}
