@@ -10,6 +10,7 @@ import Marquee from 'react-fast-marquee';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { userAgent } from 'next/server';
+import Link from 'next/link';
 
 const Header = ({ lang, setLang }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -60,14 +61,14 @@ const Header = ({ lang, setLang }) => {
         {/* Desktop menu */}
         <div className="container desktop">
           <div className="logo">
-            <a href="/">
+            <Link href="/">
               <Image src={logo} alt="Iptv smarters" />
-            </a>
+            </Link>
           </div>
 
           <div className="nav-items">
             <div className="nav-item">
-              <a href="/">{t('Home')}</a>
+              <Link href="/">{t('Home')}</Link>
             </div>
             <div className="nav-item">
               <a href="#downloads">{t('Download')}</a>
@@ -119,9 +120,9 @@ const Header = ({ lang, setLang }) => {
 
         <div className="mobile-menu container">
           <div className="logo">
-            <a href="/">
+            <Link href="/">
               <img src="/images/logo.png" alt="Iptv smarters" />
-            </a>
+            </Link>
           </div>
           <div className="menu-icon" onClick={menuToggler}>
             {/* {<MenuIcon />} */}
@@ -142,9 +143,9 @@ const Header = ({ lang, setLang }) => {
           )}
           <div className={`nav-items ${!isMenuOpen && 'hide'}`} style={{ textAlign: lang === 'he' ? 'right' : 'left' }}>
             <div className="nav-item">
-              <a href="/" onClick={toggleMenuItem}>
+              <Link href="/" onClick={toggleMenuItem}>
                 {t('Home')}
-              </a>
+              </Link>
             </div>
             <div className="nav-item">
               <a href="#downloads" onClick={toggleItem}>

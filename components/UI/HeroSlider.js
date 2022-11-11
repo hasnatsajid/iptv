@@ -16,12 +16,12 @@ const HeroSlider = () => {
     <div className="hero">
       <Slider {...settings}>
         <div className="slider-item">
-          <a href="/" target="new">
-            <img src="/images/banner-1.jpg" alt="Banner 1" />
-          </a>
+          {/* <a href="/" target="new"> */}
+          <img src="/images/banner-1.jpg" alt="Banner 1" />
+          {/* </a> */}
         </div>
         <div className="slider-item">
-          <a href="/" target="new">
+          <a href="https://play.google.com/store/apps/details?id=com.nst.smartersplayer&pli=1" target="new">
             <img src="/images/banner-2.jpg" alt="Banner 2" />
           </a>
         </div>

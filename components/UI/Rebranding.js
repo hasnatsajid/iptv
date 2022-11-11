@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useTranslations } from 'next-intl';
 
+import Link from 'next/link';
+
 const Rebranding = () => {
   // const { t, i18n } = useTranslation();
   const t = useTranslations();
@@ -15,9 +17,9 @@ const Rebranding = () => {
           <div className="content">
             <div className="inner">
               <h1>{t('rebranding.heading')}</h1>
-              <a className="getnow" href="/">
+              <Link className="getnow" href="/">
                 {t('rebranding.button')}
-              </a>
+              </Link>
               <p>{t('rebranding.delivery')}</p>
             </div>
           </div>

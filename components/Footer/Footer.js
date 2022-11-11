@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const Footer = () => {
   return (
     <footer>
@@ -17,19 +19,19 @@ const Footer = () => {
 
           <div className="about">
             <div className="link">
-              <a href="/">About Us</a>
+              <Link href="/">About Us</Link>
             </div>
             <div className="link">
-              <a href="/">Terms and Conditions</a>
+              <Link href="/">Terms and Conditions</Link>
             </div>
             <div className="link">
-              <a href="/">Privacy Policy</a>
+              <Link href="/">Privacy Policy</Link>
             </div>
             <div className="link">
-              <a href="/">Refund Policy and Cancellation</a>
+              <Link href="/">Refund Policy and Cancellation</Link>
             </div>
             <div className="link">
-              <a href="/">Copyright Complaint</a>
+              <Link href="/">Copyright Complaint</Link>
             </div>
           </div>
 
