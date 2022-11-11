@@ -46,7 +46,7 @@ export default function Home() {
       </Head>
 
       <Suspense fallback={<Loader />}>
-        <div className="app" dir={locale === 'he' ? 'rtl' : 'ltr'}>
+        <div className="app">
           <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
           <Layout lang={lang} setLang={setLang}>
             {/* <button type="button" onClick={() => changeLanguage('de')}>
@@ -62,19 +62,21 @@ export default function Home() {
             es
           </button> */}
 
-            <HeroSlider />
+            <div dir={locale === 'he' ? 'rtl' : 'ltr'}>
+              <HeroSlider />
 
-            <div className="wrapper">
-              <Introduction lang={locale} />
+              <div className="wrapper">
+                <Introduction lang={locale} />
+              </div>
+              <Features lang={locale} />
+              <Downloads />
+              <Rebranding />
+              <Pro lang={locale} />
+              <Premium lang={locale} />
+              <HowItWorks />
+              <Screenshots />
+              <Terms lang={locale} />
             </div>
-            <Features lang={locale} />
-            <Downloads />
-            <Rebranding />
-            <Pro lang={locale} />
-            <Premium lang={locale} />
-            <HowItWorks />
-            <Screenshots />
-            <Terms lang={locale} />
           </Layout>
         </div>
       </Suspense>
