@@ -48,7 +48,7 @@ export default function Home() {
       <Suspense fallback={<Loader />}>
         <div className="app">
           <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
-          <Layout lang={lang} setLang={setLang}>
+          <Layout lang={locale} setLang={setLang}>
             {/* <button type="button" onClick={() => changeLanguage('de')}>
             de
           </button>
