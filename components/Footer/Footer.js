@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-const Footer = () => {
+const Footer = ({ lang }) => {
   return (
     <footer>
       <div className="main-footer">
@@ -19,25 +19,25 @@ const Footer = () => {
 
           <div className="about">
             <div className="link">
-              <Link href="/">About Us</Link>
+              <Link href={`/${lang}/about`}>About Us</Link>
             </div>
             <div className="link">
-              <Link href="/">Terms and Conditions</Link>
+              <Link href={`/${lang}/terms-and-conditions`}>Terms and Conditions</Link>
             </div>
             <div className="link">
-              <Link href="/">Privacy Policy</Link>
+              <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
             </div>
             <div className="link">
-              <Link href="/">Refund Policy and Cancellation</Link>
+              <Link href={`/${lang}/refund-policy-cancellation`}>Refund Policy and Cancellation</Link>
             </div>
             <div className="link">
-              <Link href="/">Copyright Complaint</Link>
+              <Link href={`/${lang}/refund-policy-cancellation`}>Copyright Complaint</Link>
             </div>
           </div>
 
           <div className="support">
             <p>
-              <strong>Email : support@iptvsmarters.com</strong>
+              <strong>Email : kobi.iptv@gmail.com</strong>
             </p>
             <div className="icons">
               <a href="https://play.google.com/store/apps/details?id=com.nst.smartersplayer" className="icon">

@@ -1,0 +1,70 @@
+.about {
+  padding: 4% 0;
+
+  .heading {
+    // font-size: 17px;
+    // line-height: 1.5em;
+    // margin-bottom: 20px;
+
+    h2 {
+      text-align: center;
+    }
+  }
+
+  .content {
+    h2,
+    h3 {
+      font-size: 20px;
+      padding-bottom: 0px;
+      font-family: Open Sans;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      line-height: 1.3em;
+      text-transform: uppercase;
+    }
+
+    h3,
+    li {
+      font-size: 17px;
+    }
+
+    ol,
+    ul {
+      padding: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.7em;
+    }
+
+    p {
+      line-height: 1.5em;
+      word-break: break-word;
+      word-wrap: break-word;
+      margin-bottom: 0.5em;
+      font-size: 17px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.privacy {
+  h2 {
+    font-size: 24px !important;
+  }
+
+  table {
+    border: 1px solid #e5e5e5;
+    border-color: #545454;
+    width: 715px;
+    border-top: none;
+
+    tbody {
+      vertical-align: baseline;
+    }
+
+    td {
+      border-top: 1px solid #e5e5e5;
+    }
+  }
+}

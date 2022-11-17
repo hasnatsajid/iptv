@@ -6,7 +6,7 @@ const Layout = ({ children, lang, setLang }) => {
     <>
       <Header lang={lang} setLang={setLang} />
       {children}
-      <Footer />
+      <Footer lang={lang} />
     </>
   );
 };
