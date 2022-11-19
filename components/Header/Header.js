@@ -261,14 +261,3 @@ const Header = ({ lang, setLang }) => {
 };
 
 export default Header;
-
-export function getStaticProps({ locale }) {
-  return {
-    props: {
-      messages: {
-        // ...require(`../messages/shared/${locale}.json`),
-        ...require(`../../messages/index/${locale}.json`),
-      },
-    },
-  };
-}

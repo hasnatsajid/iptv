@@ -1,21 +1,11 @@
 import Head from 'next/head';
-import Downloads from '../components/UI/Downloads';
-import Features from '../components/UI/Features';
-import HeroSlider from '../components/UI/HeroSlider';
-import HowItWorks from '../components/UI/HowItWorks';
-import Introduction from '../components/UI/Introduction';
 import Layout from '../components/UI/Layout';
-import Premium from '../components/UI/Premium';
-import Pro from '../components/UI/Pro';
-import Rebranding from '../components/UI/Rebranding';
-import Screenshots from '../components/UI/Screenshots';
-import Terms from '../components/UI/Terms';
+import MD5 from 'crypto-js/md5';
 
 import { useRouter } from 'next/router';
 
 // i18next
 import { useTranslations } from 'next-intl';
-// import { useTranslation } from 'react-i18next';
 import React, { Suspense, useRef } from 'react';
 
 // Tawk.to chat
@@ -30,8 +20,43 @@ const Loader = () => (
   </div>
 );
 
-export default function Home() {
-  // const t = useTranslations();
+const buyPlan = async () => {
+  var data = {
+    order_id: '123123',
+    currency: 'USDT',
+    amount: '12',
+  };
+
+  const mysign = MD5(
+    btoa(JSON.stringify(data)) +
+      '4KgkyCwCTItsIXmEnX1BPyaYuqv2oTD6CXSwwmKypxwQT5aUA8jhurpKBt9xyspKPxr41nGOzZ3m6AGZgVhQTLIjMCNWREkI3oijRTkG8XD25caMc2YXHKq4xJhewzE7'
+  ).toString();
+
+  console.log('MD5 : ', mysign);
+
+  const res = await fetch('https://api.cryptomus.com/v1/payment', {
+    method: 'post',
+    headers: {
+      merchant: '88678e43-8060-427f-926c-d337853ee43e',
+      sign: mysign,
+      'Content-Type': 'application/json',
+    },
+    body: {
+      amount: '12',
+      currency: 'USD',
+      order_id: '12345',
+      url_return: '/',
+      url_callback: '/',
+    },
+  });
+
+  const result = await res.json();
+
+  console.log('Cryptomus : ', result);
+};
+
+export default function Pricing() {
+  const t = useTranslations();
   const [lang, setLang] = useState('en');
   const tawkMessengerRef = useRef();
 
@@ -40,7 +65,7 @@ export default function Home() {
   return (
     <div className="app">
       <Head>
-        <title>IPTV Smarters App is a fabulous video streaming player</title>
+        <title>Pricing - IPTV Smarters App is a fabulous video streaming player</title>
         <meta
           name="description"
           content="IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup."
@@ -53,19 +78,9 @@ export default function Home() {
           <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
           <Layout lang={locale} setLang={setLang}>
             <div dir={locale === 'he' ? 'rtl' : 'ltr'}>
-              <HeroSlider />
-
               <div className="wrapper">
-                <Introduction lang={locale} />
+                <button onClick={buyPlan}>Pay $10</button>
               </div>
-              <Features lang={locale} />
-              <Downloads />
-              <Rebranding />
-              <Pro lang={locale} />
-              <Premium lang={locale} />
-              <HowItWorks />
-              <Screenshots />
-              <Terms lang={locale} />
             </div>
           </Layout>
         </div>
@@ -78,8 +93,7 @@ export function getStaticProps({ locale }) {
   return {
     props: {
       messages: {
-        // ...require(`../messages/shared/${locale}.json`),
-        ...require(`../messages/index/${locale}.json`),
+        ...require(`../messages/prices/${locale}.json`),
       },
     },
   };

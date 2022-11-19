@@ -60,7 +60,7 @@ const Footer = ({ lang }) => {
         <div className="container wrapper">
           <div className="footer-info">
             Designed by{' '}
-            <a href="http://hasnatsajid.com" title="Hasnat">
+            <a href="http://hasnatsajid.com" target="new" title="Hasnat">
               Hasnat Sajid
             </a>
           </div>

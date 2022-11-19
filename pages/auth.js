@@ -9,6 +9,7 @@ import { useRouter } from 'next/router';
 import { signin, signup } from '../actions/auth';
 
 import Swal from 'sweetalert2';
+import Head from 'next/head';
 
 // import 'sweetalert2/src/sweetalert2.scss';
 
@@ -64,54 +65,64 @@ export default function Auth() {
   const googleError = () => console.log('Google Sign In was unsuccessful. Try again later');
 
   return (
-    <Suspense fallback={<Loader />}>
-      <div className="auth">
-        <div className="wrapper">
-          <div className="brand">{/* <Image src={Logo} /> */}</div>
-          <div className="component">{isSignup ? 'Sign Up' : 'Login'}</div>
+    <>
+      <Head>
+        <title>{!isSignup ? 'Login' : 'Register'} - IPTV Smarters App is a fabulous video streaming player</title>
+        <meta
+          name="description"
+          content="IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup."
+        />
+        <link rel="icon" href="/icon.jpg" />
+      </Head>
 
-          {/* Inputs */}
-          <form onSubmit={handleSubmit}>
-            {isSignup ? (
-              <>
-                <div className="auth-input">
-                  <input type="text" name="firstName" required placeholder="First Name *" onChange={handleChange} />
-                </div>
-                <div className="auth-input">
-                  <input type="text" name="lastName" required placeholder="Last Name *" onChange={handleChange} />
-                </div>
-                <div className="auth-input">
-                  <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
-                </div>
-                <div className="auth-input">
-                  <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
-                </div>
-                <div className="auth-input">
-                  <input type="password" name="confirmPassword" required placeholder="Confirm Password *" onChange={handleChange} />
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="auth-input">
-                  <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
-                </div>
-                <div className="auth-input">
-                  <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
-                </div>
-              </>
-            )}
+      <Suspense fallback={<Loader />}>
+        <div className="auth">
+          <div className="wrapper">
+            <div className="brand">{/* <Image src={Logo} /> */}</div>
+            <div className="component">{isSignup ? 'Sign Up' : 'Login'}</div>
 
-            <div className="providers">
-              <div className="google">
-                <button type="submit">
-                  <div>
-                    {/* <Image src={google} /> */}
-                    <p>{!isSignup ? 'Login' : 'Sign Up'}</p>
+            {/* Inputs */}
+            <form onSubmit={handleSubmit}>
+              {isSignup ? (
+                <>
+                  <div className="auth-input">
+                    <input type="text" name="firstName" required placeholder="First Name *" onChange={handleChange} />
                   </div>
-                </button>
-              </div>
+                  <div className="auth-input">
+                    <input type="text" name="lastName" required placeholder="Last Name *" onChange={handleChange} />
+                  </div>
+                  <div className="auth-input">
+                    <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
+                  </div>
+                  <div className="auth-input">
+                    <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
+                  </div>
+                  <div className="auth-input">
+                    <input type="password" name="confirmPassword" required placeholder="Confirm Password *" onChange={handleChange} />
+                  </div>
+                </>
+              ) : (
+                <>
+                  <div className="auth-input">
+                    <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
+                  </div>
+                  <div className="auth-input">
+                    <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
+                  </div>
+                </>
+              )}
 
-              {/* <GoogleLogin
+              <div className="providers">
+                <div className="google">
+                  <button type="submit">
+                    <div>
+                      {/* <Image src={google} /> */}
+                      <p>{!isSignup ? 'Login' : 'Register'}</p>
+                    </div>
+                  </button>
+                </div>
+
+                {/* <GoogleLogin
               clientId="564033717568-bu2nr1l9h31bhk9bff4pqbenvvoju3oq.apps.googleusercontent.com"
               render={(renderProps) => (
                 <div className="google">
@@ -128,7 +139,7 @@ export default function Auth() {
               cookiePolicy="single_host_origin"
             /> */}
 
-              {/* <div className="facebook">
+                {/* <div className="facebook">
               <button>
                 <div>
                   <Image src={fb} />
@@ -136,20 +147,21 @@ export default function Auth() {
                 </div>
               </button>
             </div> */}
-            </div>
-          </form>
+              </div>
+            </form>
 
-          <div className="signup">
-            <div>
-              <span>{isSignup ? 'Already have an account ?' : "Don't have an account ?"}</span>
-              <button onClick={switchMode}>
-                <h3>{isSignup ? 'Sign in' : 'Sign Up'}</h3>
-              </button>
+            <div className="signup">
+              <div>
+                <span>{isSignup ? 'Already have an account ?' : "Don't have an account ?"}</span>
+                <button onClick={switchMode}>
+                  <h3>{isSignup ? 'Sign in' : 'Register Now!'}</h3>
+                </button>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </Suspense>
+      </Suspense>
+    </>
   );
 }
 
