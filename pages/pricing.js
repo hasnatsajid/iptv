@@ -40,6 +40,7 @@ const buyPlan = async () => {
       merchant: '88678e43-8060-427f-926c-d337853ee43e',
       sign: mysign,
       'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
     },
     body: {
       amount: '12',
