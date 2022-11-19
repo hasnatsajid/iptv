@@ -11,12 +11,20 @@ import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { userAgent } from 'next/server';
 import Link from 'next/link';
+import decode from 'jwt-decode';
 
 const Header = ({ lang, setLang }) => {
+  const [user, setUser] = useState();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // const { t, i18n } = useTranslation();
   const t = useTranslations();
   const router = useRouter();
+  const { locale } = router;
+
+  useEffect(() => {
+    const storage = localStorage.getItem('profile');
+    setUser(JSON.parse(storage));
+  }, []);
 
   const menuToggler = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -43,6 +51,25 @@ const Header = ({ lang, setLang }) => {
     const lng = localStorage.getItem('i18nextLng');
     setLang(lng);
   }, []);
+
+  const logout = () => {
+    localStorage.removeItem('profile');
+
+    router.push(`/${locale}/auth`);
+  };
+
+  useEffect(() => {
+    const token = user?.token;
+
+    if (token) {
+      const decodedToken = decode(token);
+
+      console.log(decodedToken);
+
+      // if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+      if (decodedToken.exp * 1000 < new Date().getTime()) logout();
+    }
+  }, [user]);
 
   return (
     <header>
@@ -89,7 +116,13 @@ const Header = ({ lang, setLang }) => {
               <a href="#features">{t('ContactUs')}</a>
             </div>
             <div className="nav-item">
-              <a href="https://users.iptvsmarters.com/index.php/login">{t('MyAccount')}</a>
+              {user?.result ? (
+                <Link href={`/${lang}/auth`} onClick={logout}>
+                  {t('logout')}
+                </Link>
+              ) : (
+                <Link href={`/${lang}/auth`}>{t('login')}</Link>
+              )}{' '}
             </div>
             <div className="nav-item">
               <div className="langs">
@@ -174,7 +207,7 @@ const Header = ({ lang, setLang }) => {
               <a href="#features">{t('ContactUs')}</a>
             </div>
             <div className="nav-item">
-              <a href="https://users.iptvsmarters.com/index.php/login">{t('MyAccount')}</a>
+              <a href={`/${lang}/auth`}>{t('MyAccount')}</a>
             </div>
             <div className="nav-item">
               {/* <div className="langs">

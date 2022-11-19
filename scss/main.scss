@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
 
+@import 'variables';
 @import 'header';
 @import 'hero';
 @import 'intro';
@@ -12,9 +13,11 @@
 @import 'screenshots';
 @import 'terms';
 @import 'footer';
+// @import 'sweetalert2';
 
 // pages
 @import 'about';
+@import 'auth';
 
 h2 {
   font-size: 24px;
