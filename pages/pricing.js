@@ -3,6 +3,7 @@ import Layout from '../components/UI/Layout';
 
 import { useRouter } from 'next/router';
 
+import { doPayment } from '../api';
 // i18next
 import { useTranslations } from 'next-intl';
 import React, { Suspense, useRef } from 'react';
@@ -20,39 +21,35 @@ const Loader = () => (
 );
 
 const buyPlan = async () => {
-  var data = {
-    order_id: '123123',
-    currency: 'USDT',
-    amount: '12',
-  };
-
-  const mysign = MD5(
-    btoa(JSON.stringify(data)) +
-      '4KgkyCwCTItsIXmEnX1BPyaYuqv2oTD6CXSwwmKypxwQT5aUA8jhurpKBt9xyspKPxr41nGOzZ3m6AGZgVhQTLIjMCNWREkI3oijRTkG8XD25caMc2YXHKq4xJhewzE7'
-  ).toString();
-
-  console.log('MD5 : ', mysign);
-
-  const res = await fetch('https://api.cryptomus.com/v1/payment', {
-    method: 'post',
-    headers: {
-      merchant: '88678e43-8060-427f-926c-d337853ee43e',
-      sign: mysign,
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-    },
-    body: {
-      amount: '12',
-      currency: 'USD',
-      order_id: '12345',
-      url_return: '/',
-      url_callback: '/',
-    },
-  });
-
-  const result = await res.json();
-
-  console.log('Cryptomus : ', result);
+  doPayment();
+  // var data = {
+  //   order_id: '123123',
+  //   currency: 'USDT',
+  //   amount: '12',
+  // };
+  // const mysign = MD5(
+  //   btoa(JSON.stringify(data)) +
+  //     '4KgkyCwCTItsIXmEnX1BPyaYuqv2oTD6CXSwwmKypxwQT5aUA8jhurpKBt9xyspKPxr41nGOzZ3m6AGZgVhQTLIjMCNWREkI3oijRTkG8XD25caMc2YXHKq4xJhewzE7'
+  // ).toString();
+  // console.log('MD5 : ', mysign);
+  // const res = await fetch('https://api.cryptomus.com/v1/payment', {
+  //   method: 'post',
+  //   headers: {
+  //     merchant: '88678e43-8060-427f-926c-d337853ee43e',
+  //     sign: mysign,
+  //     'Content-Type': 'application/json',
+  //     'Access-Control-Allow-Origin': '*',
+  //   },
+  //   body: {
+  //     amount: '12',
+  //     currency: 'USD',
+  //     order_id: '12345',
+  //     url_return: '/',
+  //     url_callback: '/',
+  //   },
+  // });
+  // const result = await res.json();
+  // console.log('Cryptomus : ', result);
 };
 
 export default function Pricing() {
