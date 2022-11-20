@@ -1,6 +1,5 @@
 import Head from 'next/head';
 import Layout from '../components/UI/Layout';
-import MD5 from 'crypto-js/md5';
 
 import { useRouter } from 'next/router';
 

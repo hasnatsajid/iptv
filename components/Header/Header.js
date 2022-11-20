@@ -115,7 +115,7 @@ const Header = ({ lang, setLang }) => {
             <div className="nav-item">
               <a href="#features">{t('ContactUs')}</a>
             </div>
-            <div className="nav-item">
+            <div className="nav-item login">
               {user?.result ? (
                 <Link href={`/${lang}/auth`} onClick={logout}>
                   {t('logout')}
@@ -206,8 +206,15 @@ const Header = ({ lang, setLang }) => {
             <div className="nav-item">
               <a href="#features">{t('ContactUs')}</a>
             </div>
-            <div className="nav-item">
-              <a href={`/${lang}/auth`}>{t('MyAccount')}</a>
+            <div className="nav-item login">
+              {/* <a href={`/${lang}/auth`}>{t('MyAccount')}</a> */}
+              {user?.result ? (
+                <Link href={`/${lang}/auth`} onClick={logout}>
+                  {t('logout')}
+                </Link>
+              ) : (
+                <Link href={`/${lang}/auth`}>{t('login')}</Link>
+              )}{' '}
             </div>
             <div className="nav-item">
               {/* <div className="langs">
