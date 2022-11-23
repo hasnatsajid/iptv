@@ -7,17 +7,20 @@
   "HowItWorks": "איך זה עובד",
   "Screenshots": "צילומי מסך",
   "Blog": "בלוג",
+  "Pricing": "תמחור",
   "ContactUs": "צור קשר",
   "MyAccount": "חשבון Smarters שלי",
   "heading": "בחר את התוכנית המועדפת עליך",
   "singly": "יַרחוֹן",
   "valid": "תקף ל",
   "month": "חוֹדֶשׁ",
+  "year": "Year",
   "months": "חודשים",
   "streaming": "סטרימינג ללא הגבלה",
   "recording": "הקלטה",
   "support": "תמיכה 24/7",
   "buynow": "קנה עכשיו",
   "triply": "תלת חודשי",
-  "longy": "מותאם אישית-חודשי"
+  "longy": "מותאם אישית-חודשי",
+  "yearly": "Yearly"
 }

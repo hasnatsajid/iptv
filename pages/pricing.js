@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { doPayment } from '../api';
 // i18next
 import { useTranslations } from 'next-intl';
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
@@ -21,6 +21,7 @@ const Loader = () => (
 );
 
 export default function Pricing() {
+  const [user, setUser] = useState();
   const [months, setMonths] = useState(6);
   const t = useTranslations();
   const [lang, setLang] = useState('en');
@@ -29,11 +30,24 @@ export default function Pricing() {
   const router = useRouter();
   const { locale } = router;
 
+  useEffect(() => {
+    const storage = localStorage.getItem('profile');
+    const lng = localStorage.getItem('i18nextLng');
+    setLang(lng);
+    setUser(JSON.parse(storage));
+  }, []);
+
   const buyMonthly = async () => {
+    if (!user) {
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
     const resp = await doPayment({
       amount: '30',
       currency: 'USDT',
-      order_id: '12312',
+      email,
       is_payment_multiple: false,
       url_return: 'https://iptv.hassuu.com/',
       url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
@@ -44,13 +58,63 @@ export default function Pricing() {
   };
 
   const buyTrily = async () => {
-    const resp = await doPayment({ amount: 25, currency: 'USDT', order_id: '123123' });
-    console.log(resp.data.data.result);
+    if (!user) {
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
+    const resp = await doPayment({
+      amount: '75',
+      currency: 'USDT',
+      email,
+      is_payment_multiple: false,
+      url_return: 'https://iptv.hassuu.com/',
+      url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
+    });
+
+    const result = resp.data.data.result;
+    router.push(result.url);
   };
 
-  const buyCustom = async () => {
-    const resp = await doPayment({ amount: 20, currency: 'USDT', order_id: '123123' });
-    console.log(resp);
+  const buyHexa = async () => {
+    if (!user) {
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
+    const resp = await doPayment({
+      amount: '120',
+      currency: 'USDT',
+      email,
+      is_payment_multiple: false,
+      url_return: 'https://iptv.hassuu.com/',
+      url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
+    });
+
+    const result = resp.data.data.result;
+    router.push(result.url);
+  };
+
+  const buyYearly = async () => {
+    if (!user) {
+      console.log(lang);
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
+    const resp = await doPayment({
+      amount: '240',
+      currency: 'USDT',
+      email,
+      is_payment_multiple: false,
+      url_return: 'https://iptv.hassuu.com/',
+      url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
+    });
+    const result = resp.data.data.result;
+    router.push(result.url);
   };
 
   return (
@@ -139,17 +203,7 @@ export default function Pricing() {
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>
-                            For{' '}
-                            {/* <select name="" id="" onChange={(e) => setMonths(e.target.value)}>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                              <option value="9">9</option>
-                              <option value="10">10</option>
-                            </select>{' '} */}
-                            6 {t('months')}
-                          </i>
+                          <i>For 6 {t('months')}</i>
                         </h2>
                       </div>
                       <div className="options">
@@ -161,7 +215,7 @@ export default function Pricing() {
                       </div>
                       <div className="buy">
                         {' '}
-                        <button onClick={buyCustom}>{t('buynow')}</button>
+                        <button onClick={buyHexa}>{t('buynow')}</button>
                       </div>
                     </div>
                     <div className="plan">
@@ -175,17 +229,7 @@ export default function Pricing() {
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>
-                            For{' '}
-                            {/* <select name="" id="" onChange={(e) => setMonths(e.target.value)}>
-                              <option value="6">6</option>
-                              <option value="7">7</option>
-                              <option value="8">8</option>
-                              <option value="9">9</option>
-                              <option value="10">10</option>
-                            </select>{' '} */}
-                            1 {t('year')}
-                          </i>
+                          <i>For 1 {t('year')}</i>
                         </h2>
                       </div>
                       <div className="options">
@@ -197,7 +241,7 @@ export default function Pricing() {
                       </div>
                       <div className="buy">
                         {' '}
-                        <button onClick={buyCustom}>{t('buynow')}</button>
+                        <button onClick={buyYearly}>{t('buynow')}</button>
                       </div>
                     </div>
                   </div>

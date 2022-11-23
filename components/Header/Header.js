@@ -32,6 +32,7 @@ const Header = ({ lang, setLang }) => {
 
   const toggleLang = (e) => {
     const lng = e.target.value;
+    console.log(lng);
     localStorage.setItem('i18nextLng', lng);
     // router.push(`../${lng}`);
     // i18n.changeLanguage(lng);
@@ -64,7 +65,7 @@ const Header = ({ lang, setLang }) => {
     if (token) {
       const decodedToken = decode(token);
 
-      console.log(decodedToken);
+      // console.log(decodedToken);
 
       // if (decodedToken.exp * 1000 < new Date().getTime()) logout();
       if (decodedToken.exp * 1000 < new Date().getTime()) logout();
@@ -110,7 +111,7 @@ const Header = ({ lang, setLang }) => {
               <a href="#screenshots">{t('Screenshots')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('Blog')}</a>
+              <a href={`/${lang}/pricing`}>{t('Pricing')}</a>
             </div>
             <div className="nav-item">
               <a href="#features">{t('ContactUs')}</a>
@@ -201,7 +202,7 @@ const Header = ({ lang, setLang }) => {
               </a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('Blog')}</a>
+              <a href={`/${lang}/pricing`}>{t('Pricing')}</a>
             </div>
             <div className="nav-item">
               <a href="#features">{t('ContactUs')}</a>
