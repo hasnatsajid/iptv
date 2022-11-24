@@ -11,18 +11,14 @@
   "ContactUs": "Contacta con nosotros",
   "MyAccount": "Mi cuenta Smarters",
   "heading": "Selecciona tu plan favorito",
-  "for": "Para",
   "singly": "Mensual",
   "valid": "Válido para",
   "month": "Mes",
-  "permonth": "por mes",
-  "year": "Año",
   "months": "Meses",
   "streaming": "Transmisión ilimitada",
   "recording": "Grabación",
   "support": "Soporte 24/7",
   "buynow": "Comprar ahora",
   "triply": "Trimensual",
-  "longy": "Personalizado-Mensual",
-  "yearly": "Anual"
+  "longy": "Personalizado-Mensual"
 }

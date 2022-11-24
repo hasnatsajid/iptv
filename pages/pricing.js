@@ -147,12 +147,14 @@ export default function Pricing() {
                       </div>
                       <div className="price">
                         <h1>
-                          $30 <span>per month</span>
+                          $30 <span>{t('permonth')}</span>
                         </h1>
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>For 1 {t('month')}</i>
+                          <i>
+                            {t('for')} 1 {t('month')}
+                          </i>
                         </h2>
                       </div>
                       <div className="options">
@@ -172,12 +174,14 @@ export default function Pricing() {
                       </div>
                       <div className="price">
                         <h1>
-                          $25 <span>per month</span>
+                          $25 <span>{t('permonth')}</span>
                         </h1>
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>For 3 {t('months')}</i>
+                          <i>
+                            {t('for')} 3 {t('months')}
+                          </i>
                         </h2>
                       </div>
                       <div className="options">
@@ -198,12 +202,14 @@ export default function Pricing() {
                       </div>
                       <div className="price">
                         <h1>
-                          $20 <span>per month</span>
+                          $20 <span>{t('permonth')}</span>
                         </h1>
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>For 6 {t('months')}</i>
+                          <i>
+                            {t('for')} 6 {t('months')}
+                          </i>
                         </h2>
                       </div>
                       <div className="options">
@@ -224,12 +230,14 @@ export default function Pricing() {
                       </div>
                       <div className="price">
                         <h1>
-                          $20 <span>per month</span>
+                          $20 <span>{t('permonth')}</span>
                         </h1>
                       </div>
                       <div className="valid">
                         <h2>
-                          <i>For 1 {t('year')}</i>
+                          <i>
+                            {t('for')} 1 {t('year')}
+                          </i>
                         </h2>
                       </div>
                       <div className="options">

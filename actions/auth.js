@@ -19,7 +19,7 @@ export const signin = async (form, router, lang) => {
     let timerInterval;
     Swal.fire({
       icon: 'success',
-      title: 'Successfully logged in!',
+      // title: 'Successfully logged in!',
       //   html: 'I will close in <b></b> milliseconds.',
       timer: 2000,
       timerProgressBar: true,

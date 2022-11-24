@@ -1,10 +1,10 @@
 import { useState, useEffect, Suspense } from 'react';
-import Image from 'next/image';
 // import { GoogleLogin } from 'react-google-login';
 
 // import Logo from '../public/images/logos/logo-flat.png';
 // import google from '../public/svgs/google.svg';
 // import fb from '../public/svgs/fb.svg';
+import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
 import { signin, signup } from '../actions/auth';
 
@@ -24,6 +24,7 @@ const Loader = () => (
 );
 
 export default function Auth() {
+  const t = useTranslations();
   const router = useRouter();
   const [isSignup, setIsSignup] = useState(false);
   const [form, setForm] = useState(initialState);
@@ -76,38 +77,38 @@ export default function Auth() {
       </Head>
 
       <Suspense fallback={<Loader />}>
-        <div className="auth">
+        <div className="auth" dir={locale === 'he' ? 'rtl' : 'ltr'}>
           <div className="wrapper">
             <div className="brand">{/* <Image src={Logo} /> */}</div>
-            <div className="component">{isSignup ? 'Sign Up' : 'Login'}</div>
+            <div className="component">{isSignup ? `${t('signup')}` : `${t('login')}`}</div>
 
             {/* Inputs */}
             <form onSubmit={handleSubmit}>
               {isSignup ? (
                 <>
                   <div className="auth-input">
-                    <input type="text" name="firstName" required placeholder="First Name *" onChange={handleChange} />
+                    <input type="text" name="firstName" required placeholder={`${t('firstName')} *`} onChange={handleChange} />
                   </div>
                   <div className="auth-input">
-                    <input type="text" name="lastName" required placeholder="Last Name *" onChange={handleChange} />
+                    <input type="text" name="lastName" required placeholder={`${t('lastName')} *`} onChange={handleChange} />
                   </div>
                   <div className="auth-input">
-                    <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
+                    <input type="email" name="email" required placeholder={`${t('email')} *`} onChange={handleChange} />
                   </div>
                   <div className="auth-input">
-                    <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
+                    <input type="password" name="password" required placeholder={`${t('password')} *`} onChange={handleChange} />
                   </div>
                   <div className="auth-input">
-                    <input type="password" name="confirmPassword" required placeholder="Confirm Password *" onChange={handleChange} />
+                    <input type="password" name="confirmPassword" required placeholder={`${t('confirmPassword')} *`} onChange={handleChange} />
                   </div>
                 </>
               ) : (
                 <>
                   <div className="auth-input">
-                    <input type="email" name="email" required placeholder="Email Address *" onChange={handleChange} />
+                    <input type="email" name="email" required placeholder={`${t('email')} *`} onChange={handleChange} />
                   </div>
                   <div className="auth-input">
-                    <input type="password" name="password" required placeholder="Password *" onChange={handleChange} />
+                    <input type="password" name="password" required placeholder={`${t('password')} *`} onChange={handleChange} />
                   </div>
                 </>
               )}
@@ -117,7 +118,7 @@ export default function Auth() {
                   <button type="submit">
                     <div>
                       {/* <Image src={google} /> */}
-                      <p>{!isSignup ? 'Login' : 'Register'}</p>
+                      <p>{!isSignup ? `${t('login')}` : `${t('register')}`}</p>
                     </div>
                   </button>
                 </div>
@@ -152,9 +153,9 @@ export default function Auth() {
 
             <div className="signup">
               <div>
-                <span>{isSignup ? 'Already have an account ?' : "Don't have an account ?"}</span>
+                <span>{isSignup ? `${t('already')}` : `${t('noaccount')}`}</span>
                 <button onClick={switchMode}>
-                  <h3>{isSignup ? 'Sign in' : 'Register Now!'}</h3>
+                  <h3>{isSignup ? `${t('signin')}` : `${t('registernow')}`}</h3>
                 </button>
               </div>
             </div>

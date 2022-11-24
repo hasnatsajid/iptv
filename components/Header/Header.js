@@ -30,9 +30,7 @@ const Header = ({ lang, setLang }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const toggleLang = (e) => {
-    const lng = e.target.value;
-    console.log(lng);
+  const toggleLang = (lng) => {
     localStorage.setItem('i18nextLng', lng);
     // router.push(`../${lng}`);
     // i18n.changeLanguage(lng);
@@ -127,16 +125,16 @@ const Header = ({ lang, setLang }) => {
             </div>
             <div className="nav-item">
               <div className="langs">
-                <a href="/en">
+                <a href="/en" onClick={() => toggleLang('en')}>
                   <Image src={engFlag} alt="english" width={20} height={20} />
                 </a>
-                <a href="/es">
+                <a href="/es" onClick={() => toggleLang('es')}>
                   <Image src={espFlag} alt="spanish" width={20} />
                 </a>
-                <a href="/he">
+                <a href="/he" onClick={() => toggleLang('he')}>
                   <Image src={hebFlag} alt="hebrew" width={20} height={20} />
                 </a>
-                <a href="/de">
+                <a href="/de" onClick={() => toggleLang('de')}>
                   <Image src={gerFlag} alt="german" width={20} />
                 </a>
                 {/* <select name="" id="" value={lang} onChange={toggleLang}>

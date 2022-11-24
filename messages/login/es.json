@@ -1,5 +1,24 @@
 {
-  "heading": "Sobre nosotros",
-  "1": "Somos una empresa de desarrollo de software. Nos enfocamos en tercerizar el desarrollo de software OTT personalizado a través de múltiples tecnologías, incluidas .NET, Java, PHP, JavaScript y Laravel. Con más de 12 años en el campo de TI y más de 1000 software exitosos para docenas de clientes en todo el mundo, tenemos nuestro propio OTT Player mejor calificado",
-  "2": "Contamos con un sólido equipo de desarrolladores de software, analistas comerciales, diseñadores, ingenieros de control de calidad y gerentes de proyecto que respaldan a nuestros clientes en cada fase del proceso de desarrollo. Nuestra gente es nuestra principal fortaleza, por lo que estamos mejorando constantemente nuestro habilidades y conocimientos para crecer en profesionalismo y mantenerse actualizado en este mundo de TI en constante cambio. Nuestras aplicaciones son flexibles para adaptarse a las necesidades de nuestros clientes. Nuestra estrategia y dirección de trabajo se preparará en función de los requisitos comerciales del cliente. Tratamos a cada cliente como el primero Nuestro objetivo es facilitar el día a día de las personas aprovechando la tecnología."
+  "Home": "Hogar",
+  "logout": "Logout",
+  "Download": "Descargar",
+  "Features": "Características",
+  "HowItWorks": "Cómo funciona",
+  "Screenshots": "capturas de pantalla",
+  "Blog": "Blog",
+  "Pricing": "Precios",
+  "ContactUs": "Contacta con nosotros",
+  "MyAccount": "Mi cuenta Smarters",
+  "login": "Acceso",
+  "signin": "Iniciar sesión",
+  "already": "Ya tienes una cuenta",
+  "noaccount": "no tiene una cuenta",
+  "signup": "Inscribirse",
+  "register": "Registro",
+  "registernow": "Regístrate ahora!",
+  "firstName": "Primer nombre",
+  "lastName": "Apellido",
+  "email": "Dirección de correo electrónico",
+  "password": "Clave",
+  "confirmPassword": "Confirmar contraseña"
 }
