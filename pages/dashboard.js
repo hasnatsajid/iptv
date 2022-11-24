@@ -40,7 +40,7 @@ export default function Dashboard() {
   return (
     <div className="app">
       <Head>
-        <title>Pricing - IPTV Smarters App is a fabulous video streaming player</title>
+        <title>Dashboard - IPTV Smarters App is a fabulous video streaming player</title>
         <meta
           name="description"
           content="IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup."
@@ -50,7 +50,6 @@ export default function Dashboard() {
 
       <Suspense fallback={<Loader />}>
         <div className="app">
-          <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
           <Layout lang={locale} setLang={setLang}>
             <div dir={locale === 'he' ? 'rtl' : 'ltr'}>
               <div className="dashboard">
@@ -61,7 +60,7 @@ export default function Dashboard() {
                     <h1>Dashboard</h1>
 
                     {/* <button onClick={() => console.log(user.result.email)}>log user</button> */}
-                    <h3>{user.result.payment_status}</h3>
+                    {/* <h3>{user?.result?.payment_status}</h3> */}
                   </div>
                 </div>
               </div>
