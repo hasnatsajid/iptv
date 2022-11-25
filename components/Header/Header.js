@@ -114,6 +114,11 @@ const Header = ({ lang, setLang }) => {
             <div className="nav-item">
               <a href="#features">{t('ContactUs')}</a>
             </div>
+            {user && (
+              <div className="nav-item">
+                <Link href="/dashboard">{t('MyAccount')}</Link>
+              </div>
+            )}
             <div className="nav-item login">
               {user?.result ? (
                 <Link href={`/${lang}/auth`} onClick={logout}>

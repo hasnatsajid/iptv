@@ -54,14 +54,11 @@ export default function Dashboard() {
             <div dir={locale === 'he' ? 'rtl' : 'ltr'}>
               <div className="dashboard">
                 <div className="wrapper">
-                  {/* <button onClick={buyPlan}>Pay $10</button> */}
-
-                  <div className="heading">
-                    <h1>Dashboard</h1>
-
-                    {/* <button onClick={() => console.log(user.result.email)}>log user</button> */}
-                    {/* <h3>{user?.result?.payment_status}</h3> */}
-                  </div>
+                  <div className="heading"></div>
+                  <h2 style={{ textTransform: 'capitalize' }}>
+                    Subscription status:
+                    <span className={user?.result?.payment_status === 'active' ? 'green' : 'red'}>{user?.result?.payment_status}</span>
+                  </h2>
                 </div>
               </div>
             </div>

@@ -22,7 +22,6 @@ const Loader = () => (
 
 export default function Pricing() {
   const [user, setUser] = useState();
-  const [months, setMonths] = useState(6);
   const t = useTranslations();
   const [lang, setLang] = useState('en');
   const tawkMessengerRef = useRef();
@@ -48,6 +47,7 @@ export default function Pricing() {
       amount: '30',
       currency: 'USDT',
       email,
+      plan: 'monthly',
       is_payment_multiple: false,
       url_return: 'https://iptv.hassuu.com/',
       url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
@@ -68,6 +68,7 @@ export default function Pricing() {
       amount: '75',
       currency: 'USDT',
       email,
+      plan: 'tri-monthly',
       is_payment_multiple: false,
       url_return: 'https://iptv.hassuu.com/',
       url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
@@ -88,6 +89,7 @@ export default function Pricing() {
       amount: '120',
       currency: 'USDT',
       email,
+      plan: 'hexa-monthly',
       is_payment_multiple: false,
       url_return: 'https://iptv.hassuu.com/',
       url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
@@ -109,6 +111,7 @@ export default function Pricing() {
       amount: '240',
       currency: 'USDT',
       email,
+      plan: 'yearly',
       is_payment_multiple: false,
       url_return: 'https://iptv.hassuu.com/',
       url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
