@@ -112,7 +112,7 @@ const Header = ({ lang, setLang }) => {
               <a href={`/${lang}/pricing`}>{t('Pricing')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('ContactUs')}</a>
+              <a href={`/${lang}/contact`}>{t('ContactUs')}</a>
             </div>
             {user && (
               <div className="nav-item">
@@ -208,7 +208,7 @@ const Header = ({ lang, setLang }) => {
               <a href={`/${lang}/pricing`}>{t('Pricing')}</a>
             </div>
             <div className="nav-item">
-              <a href="#features">{t('ContactUs')}</a>
+              <a href={`/${lang}/contact`}>{t('ContactUs')}</a>
             </div>
             <div className="nav-item login">
               {/* <a href={`/${lang}/auth`}>{t('MyAccount')}</a> */}
