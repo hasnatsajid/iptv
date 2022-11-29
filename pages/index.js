@@ -60,7 +60,7 @@ export default function Home() {
               </div>
               <Features lang={locale} />
               <Downloads />
-              <Rebranding />
+              {/* <Rebranding /> */}
               <Pro lang={locale} />
               <Premium lang={locale} />
               <HowItWorks />
@@ -78,7 +78,6 @@ export function getStaticProps({ locale }) {
   return {
     props: {
       messages: {
-        // ...require(`../messages/shared/${locale}.json`),
         ...require(`../messages/index/${locale}.json`),
       },
     },

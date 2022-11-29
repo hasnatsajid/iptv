@@ -39,8 +39,11 @@ export default function Auth() {
     e.preventDefault();
 
     if (isSignup) {
+      console.log(form);
       signup(form, router, locale);
     } else {
+      console.log(form);
+      return;
       signin(form, router, locale);
     }
   };

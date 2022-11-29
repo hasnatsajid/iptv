@@ -1,0 +1,31 @@
+.contact-form {
+  color: white;
+
+  form {
+    width: 50%;
+    margin: auto;
+
+    @media (max-width: 600px) {
+      width: 90%;
+    }
+  }
+
+  .item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    input,
+    textarea {
+      width: 60%;
+      border-radius: 5px;
+    }
+  }
+
+  button {
+    padding: 10px;
+    margin: 5% auto;
+    font-size: 1.2rem;
+    font-family: 'Inter';
+  }
+}

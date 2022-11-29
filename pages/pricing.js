@@ -7,6 +7,7 @@ import { doPayment } from '../api';
 // i18next
 import { useTranslations } from 'next-intl';
 import React, { Suspense, useEffect, useRef } from 'react';
+import Modal from '../components/UI/Modal';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
@@ -25,6 +26,7 @@ export default function Pricing() {
   const t = useTranslations();
   const [lang, setLang] = useState('en');
   const tawkMessengerRef = useRef();
+  const [pay, setPay] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
@@ -120,6 +122,10 @@ export default function Pricing() {
     router.push(result.url);
   };
 
+  const toggleModal = () => {
+    setPay((prev) => !prev);
+  };
+
   return (
     <div className="app">
       <Head>
@@ -143,6 +149,7 @@ export default function Pricing() {
                   <div className="heading">
                     <h1>{t('heading')}</h1>
                   </div>
+
                   <div className="plans">
                     <div className="plan">
                       <div className="title">

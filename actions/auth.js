@@ -65,6 +65,9 @@ export const signup = async (form, router, lang) => {
       throw new Error('Passwords does not match');
     }
 
+    if (form.password.length < 5) {
+      throw new Error('Password length too small');
+    }
     const { data } = await api.signUp(form);
 
     let timerInterval;
