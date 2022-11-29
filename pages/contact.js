@@ -48,30 +48,30 @@ export default function Contact() {
       <Layout lang={locale} setLang={setLang}>
         <div className="pricing" dir={locale === 'he' ? 'rtl' : 'ltr'}>
           <div className="heading">
-            <h2>{t('heading')}</h2>
+            <h1>{t('heading')}</h1>
           </div>
 
           <div className="content wrapper">
             <div className="contact-form">
               <form onSubmit={handleSubmit}>
                 <div className="item">
-                  <label htmlFor="email">Subject: </label>
+                  <label htmlFor="email">{t('subject')}: </label>
                   <input type="text" required name="subject" onChange={handleChange} />
                 </div>
                 <div className="item">
-                  <label htmlFor="name">Name: </label>
+                  <label htmlFor="name">{t('name')}: </label>
                   <input type="text" name="name" required id="" onChange={handleChange} />
                 </div>
                 <div className="item">
-                  <label htmlFor="email">Email: </label>
+                  <label htmlFor="email">{t('email')}: </label>
                   <input type="email" name="email" id="" required onChange={handleChange} />
                 </div>
                 <div className="item">
-                  <label htmlFor="message">Message: </label>
+                  <label htmlFor="message">{t('message')}: </label>
                   <textarea name="message" id="" cols="30" rows="10" required onChange={handleChange}></textarea>
                 </div>
                 <div className="item">
-                  <button type="submit">Send Mail</button>
+                  <button type="submit">{t('sendmail')}</button>
                 </div>
               </form>
             </div>
