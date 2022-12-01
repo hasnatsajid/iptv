@@ -97,3 +97,19 @@
     }
   }
 }
+
+.methods {
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    width: 50%;
+    text-align: center;
+  }
+
+  img {
+    cursor: pointer;
+    width: 50% !important;
+    height: 100px !important;
+  }
+}

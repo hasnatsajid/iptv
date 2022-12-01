@@ -13,7 +13,7 @@ const Overlay = ({ children, heading, toggleFilter }) => {
     <div className="modal">
       <h3 className="modal__header">
         <p>{heading}</p>
-        <Image src="/svgs/close.svg" width={25} height={25} onClick={toggleFilter} />
+        <Image src="/images/close.svg" width={25} height={25} onClick={toggleFilter} alt="Close button" />
       </h3>
       <div className="modal-content">{children}</div>
     </div>
@@ -21,6 +21,26 @@ const Overlay = ({ children, heading, toggleFilter }) => {
 };
 
 const Modal = ({ children, toggleFilter, heading }) => {
+  const [isBrowser, setIsBrowser] = useState(false);
+
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
+
+  // {
+  //   isBrowser ? (
+  //     <>
+  //       {ReactDOM.createPortal(<Backdrop toggleFilter={toggleFilter} />, document.getElementById('modal-root'))}
+  //       {ReactDOM.createPortal(
+  //         <Overlay heading={heading} toggleFilter={toggleFilter}>
+  //           {children}
+  //         </Overlay>,
+  //         document.getElementById('modal-root')
+  //       )}
+  //     </>
+  //   ) : null;
+  // }
+
   return (
     <>
       {ReactDOM.createPortal(<Backdrop toggleFilter={toggleFilter} />, document.getElementById('modal-root'))}

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Layout from '../components/UI/Layout';
+import { useState } from 'react';
 
 import { useRouter } from 'next/router';
 
@@ -8,10 +9,12 @@ import { doPayment } from '../api';
 import { useTranslations } from 'next-intl';
 import React, { Suspense, useEffect, useRef } from 'react';
 import Modal from '../components/UI/Modal';
+import { fetchPostJSON } from '../utils/api-helpers';
+import getStripe from '../utils/get-stripejs';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
-import { useState } from 'react';
+import Image from 'next/image';
 
 // loading component for suspense fallback
 const Loader = () => (
@@ -23,10 +26,13 @@ const Loader = () => (
 
 export default function Pricing() {
   const [user, setUser] = useState();
+  const [amount, setAmount] = useState();
+  const [plan, setPlan] = useState('');
   const t = useTranslations();
   const [lang, setLang] = useState('en');
   const tawkMessengerRef = useRef();
   const [pay, setPay] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const router = useRouter();
   const { locale } = router;
@@ -37,6 +43,69 @@ export default function Pricing() {
     setLang(lng);
     setUser(JSON.parse(storage));
   }, []);
+
+  useEffect(() => {
+    const localLang = localStorage.getItem('i18nextLng');
+    if (localLang) {
+      setLang(localLang);
+    } else {
+      localStorage.setItem('i18nextLng', 'en');
+    }
+  }, []);
+
+  const buyStripePlan = async (amount, plan, e) => {
+    e.preventDefault();
+    if (!user) {
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
+    const response = await fetchPostJSON('/api/checkout_sessions', {
+      amount: amount,
+    });
+
+    if (response.statusCode === 500) {
+      console.error(response.message);
+      return;
+    }
+
+    // Redirect to Checkout.
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout({
+      // Make the id field from the Checkout Session creation API response
+      // available to this file, so you can provide it as parameter here
+      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      sessionId: response.id,
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+    console.warn(error.message);
+    // setLoading(false);
+  };
+
+  const buyCryptomusPlan = async (amount, plan, e) => {
+    e.preventDefault();
+    if (!user) {
+      router.push(`/${lang}/auth`);
+      return;
+    }
+    const email = user.result.email;
+
+    const resp = await doPayment({
+      amount: `${amount}`,
+      currency: 'USDT',
+      email,
+      plan,
+      is_payment_multiple: false,
+      url_return: 'https://iptv.hassuu.com/',
+      url_callback: 'https://iptv-backend.hassuu.com/payment/webhook',
+    });
+    const result = resp.data.data.result;
+    console.log(result);
+    router.push(result.url);
+  };
 
   const buyMonthly = async () => {
     if (!user) {
@@ -122,8 +191,42 @@ export default function Pricing() {
     router.push(result.url);
   };
 
+  const handleDonate = async (e) => {
+    e.preventDefault();
+    // setLoading(true);
+    // Create a Checkout Session.
+    const response = await fetchPostJSON('/api/checkout_sessions', {
+      amount: 30,
+    });
+
+    if (response.statusCode === 500) {
+      console.error(response.message);
+      return;
+    }
+
+    // Redirect to Checkout.
+    const stripe = await getStripe();
+    const { error } = await stripe.redirectToCheckout({
+      // Make the id field from the Checkout Session creation API response
+      // available to this file, so you can provide it as parameter here
+      // instead of the {{CHECKOUT_SESSION_ID}} placeholder.
+      sessionId: response.id,
+    });
+    // If `redirectToCheckout` fails due to a browser or network
+    // error, display the localized error message to your customer
+    // using `error.message`.
+    console.warn(error.message);
+    // setLoading(false);
+  };
+
   const toggleModal = () => {
-    setPay((prev) => !prev);
+    setShowModal((prev) => !prev);
+  };
+
+  const selectPlan = async (amount, plan, e) => {
+    setShowModal(true);
+    setAmount(amount);
+    setPlan(plan);
   };
 
   return (
@@ -137,6 +240,18 @@ export default function Pricing() {
         <link rel="icon" href="/icon.jpg" />
       </Head>
 
+      {showModal && (
+        <Modal toggleFilter={toggleModal} heading="Select payment method">
+          <div className="methods">
+            <a href="/" onClick={(e) => buyCryptomusPlan(amount, plan, e)}>
+              <img src="/images/cryptomus.svg" alt="Cryptomus payment method" />
+            </a>
+            <a href="/" onClick={(e) => buyStripePlan(amount, plan, e)}>
+              <img src="/images/stripe.svg" alt="Stripe visa mastercard payment method" />
+            </a>
+          </div>
+        </Modal>
+      )}
       <Suspense fallback={<Loader />}>
         <div className="app">
           <TawkMessengerReact ref={tawkMessengerRef} propertyId="636b5d9db0d6371309ce1723" widgetId="1ghdmbd3e" />
@@ -144,14 +259,17 @@ export default function Pricing() {
             <div dir={locale === 'he' ? 'rtl' : 'ltr'}>
               <div className="pricing">
                 <div className="wrapper">
-                  {/* <button onClick={buyPlan}>Pay $10</button> */}
-
                   <div className="heading">
                     <h1>{t('heading')}</h1>
                   </div>
 
                   <div className="plans">
                     <div className="plan">
+                      {/* <button onClick={() => setShowModal(true)}>toggle modal</button>
+                      <button onClick={(e) => buyStripePlan(30, 'monthly', e)}>Buy plan</button> */}
+                      {/* <form onSubmit={handleDonate}>
+                        <button type="submit">Donate $30</button>
+                      </form> */}
                       <div className="title">
                         <h2>{t('singly')}</h2>
                       </div>
@@ -175,7 +293,7 @@ export default function Pricing() {
                         </ul>
                       </div>
                       <div className="buy">
-                        <button onClick={buyMonthly}>{t('buynow')}</button>
+                        <button onClick={(e) => selectPlan(30, 'monthly', e)}>{t('buynow')}</button>
                       </div>
                     </div>
                     <div className="plan">
@@ -203,7 +321,7 @@ export default function Pricing() {
                       </div>
                       <div className="buy">
                         {' '}
-                        <button onClick={buyTrily}>{t('buynow')}</button>
+                        <button onClick={(e) => selectPlan(75, 'tri-monthly', e)}>{t('buynow')}</button>
                       </div>
                     </div>
                     <div className="plan">
@@ -231,7 +349,7 @@ export default function Pricing() {
                       </div>
                       <div className="buy">
                         {' '}
-                        <button onClick={buyHexa}>{t('buynow')}</button>
+                        <button onClick={(e) => selectPlan(120, 'hexa-monthly', e)}>{t('buynow')}</button>
                       </div>
                     </div>
                     <div className="plan">
@@ -259,7 +377,7 @@ export default function Pricing() {
                       </div>
                       <div className="buy">
                         {' '}
-                        <button onClick={buyYearly}>{t('buynow')}</button>
+                        <button onClick={(e) => selectPlan(240, 'yearly', e)}>{t('buynow')}</button>
                       </div>
                     </div>
                   </div>

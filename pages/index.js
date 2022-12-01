@@ -16,7 +16,7 @@ import { useRouter } from 'next/router';
 // i18next
 import { useTranslations } from 'next-intl';
 // import { useTranslation } from 'react-i18next';
-import React, { Suspense, useRef } from 'react';
+import React, { Suspense, useEffect, useRef } from 'react';
 
 // Tawk.to chat
 import TawkMessengerReact from '@tawk.to/tawk-messenger-react';
@@ -36,6 +36,15 @@ export default function Home() {
   const tawkMessengerRef = useRef();
 
   const { locale } = useRouter();
+
+  useEffect(() => {
+    const localLang = localStorage.getItem('i18nextLng');
+    if (localLang) {
+      setLang(localLang);
+    } else {
+      localStorage.setItem('i18nextLng', 'en');
+    }
+  }, []);
 
   return (
     <div className="app">
