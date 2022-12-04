@@ -22,5 +22,16 @@
   "buynow": "קנה עכשיו",
   "triply": "תלת חודשי",
   "longy": "מותאם אישית-חודשי",
-  "yearly": "Yearly"
+  "yearly": "Yearly",
+  "footer": {
+    "bestott": "נגן OTT הטוב ביותר",
+    "details": "אפליקציית IPTV Smarters היא נגן הזרמת וידאו נהדר המאפשר ללקוחות ה-IPTV שלך או למשתמשי הקצה שלך להזרים תוכן כמו טלוויזיה בשידור חי, VOD, סדרות ו-TV Catchup שסופק על ידך; במכשירי Android ו-iOS שלהם, טלוויזיה חכמה ואפילו ב-macOS/Windows PC/Laptop.",
+    "aboutus": "עלינו",
+    "tos": "תנאים",
+    "privacy": "מדיניות פרטיות",
+    "refundpolicy": "מדיניות החזר כספי וביטול",
+    "copyright": "תלונת זכויות יוצרים",
+    "email": "אימייל",
+    "designedby": "עוצב על ידי"
+  }
 }
