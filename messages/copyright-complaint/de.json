@@ -14,5 +14,16 @@
     "3": "IPTV Smarters Pro wird das Benutzerkonto nach Prüfung der Mitteilung und Antwort entweder sperren oder kündigen.",
     "4": "IPTV Smarters Pro wird bei wiederholten Verstößen das Konto eines solchen Benutzers trennen, der wiederholt anstößige Inhalte gepostet hat."
   },
-  "5": "Alle Beschwerden, die sich aus diesem Urheberrechtsbeschwerdeverfahren ergeben, können an unsere Rechtsabteilung unter gesendet werden"
+  "5": "Alle Beschwerden, die sich aus diesem Urheberrechtsbeschwerdeverfahren ergeben, können an unsere Rechtsabteilung unter gesendet werden",
+  "footer": {
+    "bestott": "Bester OTT-Spieler",
+    "details": "Die IPTV Smarters App ist ein fabelhafter Video-Streaming-Player, der es Ihren IPTV-Kunden oder Endbenutzern ermöglicht, von Ihnen bereitgestellte Inhalte wie Live-TV, VOD, Serien und TV-Catchup zu streamen; auf ihren Android- und iOS-Geräten, Smart TV und sogar auf macOS/Windows PC/Laptop.",
+    "aboutus": "Über uns",
+    "tos": "Geschäftsbedingungen",
+    "privacy": "Datenschutz-Bestimmungen",
+    "refundpolicy": "Rückerstattungsrichtlinie und Stornierung",
+    "copyright": "Urheberrechtsbeschwerde",
+    "email": "Email",
+    "designedby": "Entworfen von"
+  }
 }

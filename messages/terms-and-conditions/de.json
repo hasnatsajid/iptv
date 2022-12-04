@@ -35,7 +35,7 @@
       "1": "Meistersuche",
       "2": "Möglichkeit, externe EPG-Quellen hinzuzufügen",
       "3": "Bild-in-Bild-Funktion",
-      "4":  "Elterliche Kontrolle",
+      "4": "Elterliche Kontrolle",
       "5": "Chrome-Casting-Funktion",
       "6": "Funktion zum Hinzufügen externer Player",
       "7": "und andere Funktionen, die in der Basisversion enthalten sind."
@@ -204,5 +204,16 @@
     "2": "Die Adresse von IPTV Smarters Pro für die Benachrichtigung lautet:",
     "3": "Die Mitteilung muss (1) die Art und Grundlage der Forderung oder Streitigkeit beschreiben; und (2) den konkret angestrebten Rechtsbehelf darlegen („Forderung“). Wir stimmen zu, uns nach Treu und Glauben zu bemühen, den Anspruch direkt zu lösen, aber wenn wir innerhalb von 30 Tagen nach Erhalt der Mitteilung keine Einigung darüber erzielen, können Sie oder IPTV Smarters Pro ein Schiedsverfahren einleiten.",
     "4": "Während des Schiedsverfahrens wird der Betrag eines von Ihnen oder IPTV Smarters Pro gemachten Vergleichsangebots dem Schiedsrichter erst offengelegt, nachdem der Schiedsrichter eine endgültige Entscheidung und gegebenenfalls einen Schiedsspruch getroffen hat. Alle im Laufe des Schiedsverfahrens offengelegten Dokumente und Informationen sind vom Empfänger streng vertraulich zu behandeln und dürfen vom Empfänger nicht für andere Zwecke als für Zwecke des Schiedsverfahrens oder der Durchsetzung der Entscheidung und des Schiedsspruchs verwendet werden außer vertraulich gegenüber Personen offengelegt werden, die dies für solche Zwecke oder gemäß geltendem Recht benötigen."
+  },
+  "footer": {
+    "bestott": "Bester OTT-Spieler",
+    "details": "Die IPTV Smarters App ist ein fabelhafter Video-Streaming-Player, der es Ihren IPTV-Kunden oder Endbenutzern ermöglicht, von Ihnen bereitgestellte Inhalte wie Live-TV, VOD, Serien und TV-Catchup zu streamen; auf ihren Android- und iOS-Geräten, Smart TV und sogar auf macOS/Windows PC/Laptop.",
+    "aboutus": "Über uns",
+    "tos": "Geschäftsbedingungen",
+    "privacy": "Datenschutz-Bestimmungen",
+    "refundpolicy": "Rückerstattungsrichtlinie und Stornierung",
+    "copyright": "Urheberrechtsbeschwerde",
+    "email": "Email",
+    "designedby": "Entworfen von"
   }
 }

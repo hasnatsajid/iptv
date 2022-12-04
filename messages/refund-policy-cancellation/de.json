@@ -8,5 +8,16 @@
   "6": "Rückerstattungsart:",
   "7": "Alle Rückerstattungen werden durch direkte Überweisung auf Ihr Paypal-Konto bearbeitet. Wenn Sie Fragen haben oder Hilfe bei Zahlungen oder Stornierungen benötigen, senden Sie uns eine E-Mail an kobi.iptv@gmail.com",
   "8": "Ausnahmen",
-  "9": "Sie haben keinen Anspruch auf Rückerstattungen, wenn Ihr Konto aufgrund eines Verstoßes gegen unsere Nutzungsbedingungen gesperrt wurde. Bitte beachten Sie die Allgemeinen Geschäftsbedingungen, die Ihnen im Zusammenhang mit dem Kauf zur Verfügung gestellt wurden."
+  "9": "Sie haben keinen Anspruch auf Rückerstattungen, wenn Ihr Konto aufgrund eines Verstoßes gegen unsere Nutzungsbedingungen gesperrt wurde. Bitte beachten Sie die Allgemeinen Geschäftsbedingungen, die Ihnen im Zusammenhang mit dem Kauf zur Verfügung gestellt wurden.",
+  "footer": {
+    "bestott": "Bester OTT-Spieler",
+    "details": "Die IPTV Smarters App ist ein fabelhafter Video-Streaming-Player, der es Ihren IPTV-Kunden oder Endbenutzern ermöglicht, von Ihnen bereitgestellte Inhalte wie Live-TV, VOD, Serien und TV-Catchup zu streamen; auf ihren Android- und iOS-Geräten, Smart TV und sogar auf macOS/Windows PC/Laptop.",
+    "aboutus": "Über uns",
+    "tos": "Geschäftsbedingungen",
+    "privacy": "Datenschutz-Bestimmungen",
+    "refundpolicy": "Rückerstattungsrichtlinie und Stornierung",
+    "copyright": "Urheberrechtsbeschwerde",
+    "email": "Email",
+    "designedby": "Entworfen von"
+  }
 }
