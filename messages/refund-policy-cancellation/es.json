@@ -8,5 +8,16 @@
   "6": "Modalidad de devoluciones:",
   "7": "Todos los reembolsos se procesan mediante transferencia directa a su cuenta de paypal. Si tiene alguna pregunta o necesita ayuda con los pagos o la cancelación, envíenos un correo electrónico a kobi.iptv@gmail.com",
   "8": "Exenciones",
-  "9": "No será elegible para reembolsos si su cuenta ha sido suspendida por incumplimiento de nuestros Términos de servicio, consulte los términos y condiciones que se le proporcionaron en relación con la compra."
+  "9": "No será elegible para reembolsos si su cuenta ha sido suspendida por incumplimiento de nuestros Términos de servicio, consulte los términos y condiciones que se le proporcionaron en relación con la compra.",
+  "footer": {
+    "bestott": "Mejor jugador OTT",
+    "details": "La aplicación IPTV Smarters es un fabuloso reproductor de transmisión de video que permite a sus clientes o usuarios finales de IPTV transmitir contenido como TV en vivo, VOD, Series y TV Catchup proporcionados por usted; en sus dispositivos Android e iOS, Smart TV e incluso en macOS/Windows PC/Laptop.",
+    "aboutus": "Sobre nosotros",
+    "tos": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "refundpolicy": "Política de reembolso y cancelación",
+    "copyright": "Queja de derechos de autor",
+    "email": "Correo electrónico",
+    "designedby": "Diseñada por"
+  }
 }

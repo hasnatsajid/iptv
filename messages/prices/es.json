@@ -24,5 +24,16 @@
   "buynow": "Comprar ahora",
   "triply": "Trimensual",
   "longy": "Personalizado-Mensual",
-  "yearly": "Anual"
+  "yearly": "Anual",
+  "footer": {
+    "bestott": "Mejor jugador OTT",
+    "details": "La aplicación IPTV Smarters es un fabuloso reproductor de transmisión de video que permite a sus clientes o usuarios finales de IPTV transmitir contenido como TV en vivo, VOD, Series y TV Catchup proporcionados por usted; en sus dispositivos Android e iOS, Smart TV e incluso en macOS/Windows PC/Laptop.",
+    "aboutus": "Sobre nosotros",
+    "tos": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "refundpolicy": "Política de reembolso y cancelación",
+    "copyright": "Queja de derechos de autor",
+    "email": "Correo electrónico",
+    "designedby": "Diseñada por"
+  }
 }
