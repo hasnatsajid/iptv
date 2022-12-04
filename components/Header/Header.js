@@ -9,7 +9,6 @@ import Marquee from 'react-fast-marquee';
 // import { useTranslation } from 'react-i18next';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import { userAgent } from 'next/server';
 import Link from 'next/link';
 import decode from 'jwt-decode';
 

@@ -9,5 +9,16 @@
   "MyAccount": "My Smarters Account",
   "heading": "ABOUT US",
   "1": "We are a software development company. We are focused on making Custom OTT Software Development outsourcing across multiple technologies including .NET, Java, PHP, JavaScript, and Laravel. With more than 12+ years in the IT field and 1000+ successful software's for dozens of customers globally, we are having our own top-rated OTT Player",
-  "2": "We are having a strong team of software developers, business analysts, designers, QA engineers, and project managers who support our customers at each phase of the development process. Our people are our main strength thus we are constantly improving our skills and knowledge to grow professionalism and to stay up-to-date in this ever-changing IT world. Our applications are flexible to suit the needs of our customers. Our strategy and direction of work will be prepared based on the client's business requirements. We treat every client as our first. Our aim is to make the everyday lives of people easier by leveraging technology."
+  "2": "We are having a strong team of software developers, business analysts, designers, QA engineers, and project managers who support our customers at each phase of the development process. Our people are our main strength thus we are constantly improving our skills and knowledge to grow professionalism and to stay up-to-date in this ever-changing IT world. Our applications are flexible to suit the needs of our customers. Our strategy and direction of work will be prepared based on the client's business requirements. We treat every client as our first. Our aim is to make the everyday lives of people easier by leveraging technology.",
+  "footer": {
+    "bestott": "Best OTT Player",
+    "details": "The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.",
+    "aboutus": "About Us",
+    "tos": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refundpolicy": "Refund Policy and Cancellation",
+    "copyright": "Copyright Complaint",
+    "email": "Email",
+    "designedby": "Designed by"
+  }
 }

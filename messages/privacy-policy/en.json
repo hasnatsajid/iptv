@@ -145,5 +145,16 @@
     "3": "page, by emailing us at",
     "4": "or by writing to us at the following address:",
     "5": "We hope you enjoy IPTVSmarters’ products and services!"
+  },
+  "footer": {
+    "bestott": "Best OTT Player",
+    "details": "The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.",
+    "aboutus": "About Us",
+    "tos": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refundpolicy": "Refund Policy and Cancellation",
+    "copyright": "Copyright Complaint",
+    "email": "Email",
+    "designedby": "Designed by"
   }
 }

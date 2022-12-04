@@ -16,5 +16,16 @@
   "6": "Mode of refunds:",
   "7": "All refunds are processed by direct transfer to your paypal account. If you have any questions or need assistance with payments or cancellation, email us at kobi.iptv@gmail.com",
   "8": "Exemptions",
-  "9": "You won’t be eligible for refunds if your account has been suspended on the grounds of violation of our Terms of service, please refer to the terms and conditions provided to you in connection with the purchase."
+  "9": "You won’t be eligible for refunds if your account has been suspended on the grounds of violation of our Terms of service, please refer to the terms and conditions provided to you in connection with the purchase.",
+  "footer": {
+    "bestott": "Best OTT Player",
+    "details": "The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.",
+    "aboutus": "About Us",
+    "tos": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refundpolicy": "Refund Policy and Cancellation",
+    "copyright": "Copyright Complaint",
+    "email": "Email",
+    "designedby": "Designed by"
+  }
 }

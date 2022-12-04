@@ -22,5 +22,16 @@
     "3": "IPTV Smarters Pro, after reviewing the notice and reply, then, shall either suspend or terminate the user account.",
     "4": "IPTV Smarters Pro shall on repeated offences shall disconnect the account of such user who has posted offending content repeatedly."
   },
-  "5": "Any grievances resulting out this copyright redressal procedure may be sent to our legal team at"
+  "5": "Any grievances resulting out this copyright redressal procedure may be sent to our legal team at",
+  "footer": {
+    "bestott": "Best OTT Player",
+    "details": "The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.",
+    "aboutus": "About Us",
+    "tos": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refundpolicy": "Refund Policy and Cancellation",
+    "copyright": "Copyright Complaint",
+    "email": "Email",
+    "designedby": "Designed by"
+  }
 }

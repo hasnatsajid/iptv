@@ -1,43 +1,48 @@
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 
 const Footer = ({ lang }) => {
+  const t = useTranslations();
+  const router = useRouter();
+  const { locale } = router;
+
   return (
     <footer>
-      <div className="main-footer">
+      <div className="main-footer" dir={locale === 'he' ? 'rtl' : 'ltr'}>
         <div className="wrapper container">
           <div className="content">
             <div className="image">
               <img src="/images/logo-white.png" alt="footer logo" />
             </div>
             <div className="description">
-              <strong>IPTV Smarters Pro </strong>- Best OTT Player
+              <strong>IPTV Smarters Pro </strong>- {t('footer.bestott')}
               <br />
-              The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD,
-              Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.
+              {t('footer.details')}
             </div>
           </div>
 
-          <div className="about">
+          <div className="about" style={lang === 'he' ? { paddingRight: '3rem' } : { paddingLeft: '3rem' }}>
             <div className="link">
-              <Link href={`/${lang}/about`}>About Us</Link>
+              <Link href={`/${lang}/about`}>{t('footer.aboutus')}</Link>
             </div>
             <div className="link">
-              <Link href={`/${lang}/terms-and-conditions`}>Terms and Conditions</Link>
+              <Link href={`/${lang}/terms-and-conditions`}>{t('footer.tos')}</Link>
             </div>
             <div className="link">
-              <Link href={`/${lang}/privacy-policy`}>Privacy Policy</Link>
+              <Link href={`/${lang}/privacy-policy`}>{t('footer.privacy')}</Link>
             </div>
             <div className="link">
-              <Link href={`/${lang}/refund-policy-cancellation`}>Refund Policy and Cancellation</Link>
+              <Link href={`/${lang}/refund-policy-cancellation`}>{t('footer.refundpolicy')}</Link>
             </div>
             <div className="link">
-              <Link href={`/${lang}/refund-policy-cancellation`}>Copyright Complaint</Link>
+              <Link href={`/${lang}/refund-policy-cancellation`}>{t('footer.copyright')}</Link>
             </div>
           </div>
 
           <div className="support">
             <p>
-              <strong>Email : kobi.iptv@gmail.com</strong>
+              <strong>{t('footer.email')} : kobi.iptv@gmail.com</strong>
             </p>
             <div className="icons">
               <a href="https://play.google.com/store/apps/details?id=com.nst.smartersplayer" className="icon">
@@ -59,7 +64,7 @@ const Footer = ({ lang }) => {
       <div className="footer-bottom">
         <div className="container wrapper">
           <div className="footer-info">
-            Designed by{' '}
+            {t('footer.designedby')}{' '}
             <a href="http://hasnatsajid.com" target="new" title="Hasnat">
               Hasnat Sajid
             </a>

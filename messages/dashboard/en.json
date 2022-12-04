@@ -22,5 +22,16 @@
   "buynow": "Buy now",
   "triply": "Tri-Monthly",
   "longy": "Hexa-Monthly",
-  "yearly": "Yearly"
+  "yearly": "Yearly",
+  "footer": {
+    "bestott": "Best OTT Player",
+    "details": "The IPTV Smarters App is a fabulous video streaming player that allows your IPTV customers or end-users to stream content like Live TV, VOD, Series, and TV Catchup supplied by you; on their Android & iOS devices, Smart TV, and even on macOS/Windows PC/Laptop.",
+    "aboutus": "About Us",
+    "tos": "Terms and Conditions",
+    "privacy": "Privacy Policy",
+    "refundpolicy": "Refund Policy and Cancellation",
+    "copyright": "Copyright Complaint",
+    "email": "Email",
+    "designedby": "Designed by"
+  }
 }
